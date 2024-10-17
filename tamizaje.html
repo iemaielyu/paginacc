@@ -7,9 +7,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="tami.css" >
+    <link rel="stylesheet" href="style.css" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conectando Capacidades</title>
+    <title>Tamizaje</title>
     
 </head>
 
@@ -28,7 +28,7 @@
                 <a href="directorio.html" class="no-style">Directorio</a>
             </li>
             <li>
-                <a class="no-style">Tamizaje</a>
+                <a href="tamizaje.html" class="no-style">Tamizaje</a>
             </li>
         </ul>
     </div>      
@@ -39,14 +39,10 @@
             <span></span>
         </div>
     </nav>
-
-       <!-- Welcome Screen -->
-       <div class="welcome-screen">
-        <h1>¡Bienvenido!</h1>
-        <p>Este tamizaje le ayudará a determinar si una persona podría tener una o más
-            deficiencias. Pregunta y observa a la persona, tomando en cuenta las siguientes preguntas. 
-            En base a las respuestas, se te mostrará información importante para aprender más sobre la 
-            posible deficiencia, y las condiciones, causas, manejo y servicios.</p>
+    <section id="tam" class="section"></section>
+    <div class="welcome-screen">
+        <h1>¡Te damos la bienvenida!</h1>
+        <p>Esta guía te ayudará a identificar las necesidades y proporcionar servicios adecuados. Presiona el botón para comenzar.</p>
         <button class="start-button">Comenzar</button>
     </div>
 
@@ -56,48 +52,48 @@
         <div class="question-screen active">
             <h2>¿Tiene mucha dificultad para hablar o comunicarse?</h2>
             <div class="button-container">
-                <button class="boton">Sí</button>
-                <button class="boton">No</button>
+                <button class="response-button">Sí</button>
+                <button class="response-button">No</button>
             </div>
             <img src="q1.png" alt="Question 1 Image" class="question-image"> <!-- Replace src with the actual image URL -->
         </div>
         <div class="question-screen">
             <h2>¿Tiene mucha dificultad para recordar o concentrarse?</h2>
             <div class="button-container">
-                <button class="boton">Sí</button>
-                <button class="boton">No</button>
+                <button class="response-button">Sí</button>
+                <button class="response-button">No</button>
             </div>
             <img src="q2.png" alt="Question 2 Image" class="question-image"> <!-- Replace src with the actual image URL -->
         </div>
         <div class="question-screen">
             <h2>¿Tiene mucha dificultad con su cuidado personal?</h2>
             <div class="button-container">
-                <button class="boton">Sí</button>
-                <button class="boton">No</button>
+                <button class="response-button">Sí</button>
+                <button class="response-button">No</button>
             </div>
             <img src="q3.png" alt="Question 3 Image" class="question-image"> <!-- Replace src with the actual image URL -->
         </div>
         <div class="question-screen">
             <h2>¿Tiene mucha dificultad para ver?</h2>
             <div class="button-container">
-                <button class="boton">Sí</button>
-                <button class="boton">No</button>
+                <button class="response-button">Sí</button>
+                <button class="response-button">No</button>
             </div>
             <img src="q1.png" alt="Question 1 Image" class="question-image"> <!-- Replace src with the actual image URL -->
         </div>
         <div class="question-screen">
             <h2>¿Tiene mucha dificultad para escuchar?</h2>
             <div class="button-container">
-                <button class="boton">Sí</button>
-                <button class="boton">No</button>
+                <button class="response-button">Sí</button>
+                <button class="response-button">No</button>
             </div>
             <img src="q1.png" alt="Question 1 Image" class="question-image"> <!-- Replace src with the actual image URL -->
         </div>
         <div class="question-screen">
             <h2>¿Tiene mucha dificultad para sentarse, pararse, caminar o subir escalones?</h2>
             <div class="button-container">
-                <button class="boton">Sí</button>
-                <button class="boton">No</button>
+                <button class="response-button">Sí</button>
+                <button class="response-button">No</button>
             </div>
             <img src="q1.png" alt="Question 1 Image" class="question-image"> <!-- Replace src with the actual image URL -->
         </div>
@@ -105,14 +101,22 @@
         <!-- Add more questions as needed -->
 
 
-        <!-- Progress Bar -->
-        <div class="progress-container">
-            <div class="progress"></div>
-        </div>
+
     </div>
 
+    <button class="button-return-home">
+        <span>
+         <a href="index.html" target="_self" class="no-style">Regresar</a>
+        </span>
+    </button>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+    <div class="progress"></div>
+    </div>
     <!-- Animated Circle -->
     <div class="animated-circle"></div>
 
-    <script src="script.js"></script>
-
+    <script src="cuestionario.js"></script>
+</body>
+</html>
