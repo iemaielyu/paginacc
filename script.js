@@ -174,3 +174,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const categoryFilter = document.getElementById('category-filter');
+    const entityCards = document.querySelectorAll('.entity-card');
+
+    categoryFilter.addEventListener('change', function() {
+        const selectedCategory = this.value;
+
+        entityCards.forEach(card => {
+            if (selectedCategory === 'all' || card.dataset.category === selectedCategory) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+ 
