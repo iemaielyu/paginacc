@@ -13,13 +13,21 @@ const menuLinks = document.querySelectorAll('.off-screen-menu a');
 // Añadir un evento a cada enlace del menú
 menuLinks.forEach(link => {
     link.addEventListener('click', (event) => {
-        event.preventDefault();
+        event.preventDefault(); // Evita el comportamiento predeterminado de enlace
+
+        // Cierra el menú
         hamMenu.classList.remove('active');
         offScreenMenu.classList.remove('active');
 
-        const targetId = link.getAttribute('href');
-        if (targetId.startsWith('#')) {
-            const targetElement = document.querySelector(targetId);
+        const target = link.getAttribute('href');
+
+        // Verifica si el href no contiene "#"
+        if (!target.includes('#')) {
+            // Si no contiene "#", redirige a la página especificada
+            window.location.href = target;
+        } else {
+            // Si contiene "#", hace scroll suave al elemento dentro de la misma página
+            const targetElement = document.querySelector(target);
             if (targetElement) {
                 window.scrollTo({
                     top: targetElement.offsetTop,
@@ -38,36 +46,6 @@ document.addEventListener('click', (event) => {
         offScreenMenu.classList.remove('active');
     }
 });
-
-// Añadir un evento a cada enlace del menú
-menuLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-        // Prevenir el comportamiento predeterminado del enlace
-        event.preventDefault();
-
-        // Cerrar el menú después de seleccionar un enlace
-        hamMenu.classList.remove('active');
-        offScreenMenu.classList.remove('active');
-
-        // Obtener el destino del enlace (el id de la sección)
-        const targetId = link.getAttribute('href');
-        
-        // Asegurarse de que el destino sea un id interno
-        if (targetId.startsWith('#')) {
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                // Desplazar suavemente hacia la sección correspondiente
-                window.scrollTo({
-                    top: targetElement.offsetTop,  // Posición de la sección
-                    behavior: 'smooth'  // Desplazamiento suave
-                });
-            }
-        }
-    });
-});
-
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.querySelector('.start-button');
