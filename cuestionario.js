@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (answer === 'Yes') {
             // Get the keyword corresponding to the current question
             const keyword = keywords[index];
-            queryConditions.push(`${keyword} = TRUE`);
+            queryConditions.push(keyword); // Store the keyword instead of the SQL condition
         }
 
         // Move to the next question or show the final query
@@ -64,42 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
         progress.style.width = `${progressPercentage}%`;
     }
 
-    // Show the final query string in a popup
+    // Show the final query string and redirect to results page
     function showFinalQuery() {
-        const queryString = `SELECT * FROM conectandoDB.centros WHERE ${queryConditions.join(' AND ')};`;
+        // Store the selected categories in sessionStorage
+        sessionStorage.setItem('selectedCategories', JSON.stringify(queryConditions));
 
-        // Create the popup elements
-        const popupOverlay = document.createElement('div');
-        const popupContent = document.createElement('div');
-        const popupText = document.createElement('p');
-        const closeButton = document.createElement('button');
-
-        // Set class names and content
-        popupOverlay.className = 'popup-overlay';
-        popupContent.className = 'popup-content';
-        popupText.textContent = `Query Generated: ${queryString}`;
-        closeButton.textContent = 'Close';
-        closeButton.className = 'popup-close-button';
-
-        // Append elements
-        popupContent.appendChild(popupText);
-        popupContent.appendChild(closeButton);
-        popupOverlay.appendChild(popupContent);
-        document.body.appendChild(popupOverlay);
-
-        // Show the popup
-        popupOverlay.style.display = 'flex';
-        setTimeout(() => {
-            popupContent.style.opacity = '1';
-        }, 100);
-
-        // Close the popup when the button is clicked
-        closeButton.addEventListener('click', () => {
-            popupContent.style.opacity = '0';
-            setTimeout(() => {
-                popupOverlay.style.display = 'none';
-                popupOverlay.remove();
-            }, 300);
-        });
+        // Redirect to results page
+        window.location.href = 'resultados.html'; 
     }
 });
