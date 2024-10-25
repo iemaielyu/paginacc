@@ -425,7 +425,7 @@ body{
 /* Question Images */
 .question-image {
     position: absolute; /* Position relative to the question container */
-    bottom: -3%; /* Place near the bottom */
+    bottom: -20%; /* Place near the bottom */
     right: -10%; /* Place near the right */
     max-width: 35%; /* Max width of the image */
     width: 100%; /* Responsive width */
