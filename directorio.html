@@ -5,13 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Directorio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="directorio.css">
 </head>
 <body>
-    <h1>Directorio de Entidades</h1>
+      <!-- Floating Burger Menu -->
+      <div class="off-screen-menu">
+        <ul>
+            <li class="list-menu">Menú</li>
+            <li>
+                <a href="#home" class="no-style">Página principal</a>
+            </li>
+            <li>
+                <a href="/condiciones.html" class="no-style">Condiciones</a>
+            </li>
+            <li>
+                <a href="/directorio.html" class="no-style">Directorio</a>
+            </li>
+            <li>
+                <a href="/tamizaje.html" class="no-style">Tamizaje</a>
+            </li>
+        </ul>
+    </div>      
+    <nav>
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
+    <div class="header-container">
+        <h1>Directorio de Entidades</h1>
+        <img src="/directorio.png" alt="imagen del directorio" class="img-directorio">
+    </div>
     <!-- Contenedor de los filtros -->
     <div class="filter-container">
+        <p class="info-filter">¿Dónde puedo buscar servicios dirigidos a mi deficiencia?</p>
         <label>
             <input type="checkbox" class="filter" value="fisica"> Física
         </label>
@@ -30,6 +60,14 @@
     <main>
         <div id="grid-container" class="grid-container"></div>
     </main>
+
+    <button class="button-return-home">
+        <span>
+        <a href="index.html" target="_self" class="no-style">
+            <img src="/boton-regreso.png" alt="boton de regreso a página principal">
+        </a>
+        </span>
+    </button>
 
     <!-- Importar el script -->
     <script src="directorio.js"></script>
