@@ -167,13 +167,14 @@ a{
 }
 
 .button-return-home {
+    width: 2px;
+    height: 2px;
+    transform: scale(0.2);
     position: fixed;
     top: 3%;
-    right: 3%;
+    right: 7%;
     border: none;
     background-color: transparent; /* Changed from 'none' to 'transparent' */
-    margin: 0; /* Reset margins */
-    padding: 10px; /* Add padding for better clickability */
     z-index: 1000; /* Ensures it stays on top of other elements */
     cursor: pointer;
 }
@@ -653,9 +654,10 @@ body{
         top: 50%;
     }
     .button-return-home{
-        top: 2%;
-        right: 3%;
+        top: 1%;
+        right: 10%;
         max-width: 15%;
+        transform: scale(0.1);
     }
 }
 
@@ -668,7 +670,8 @@ body{
         top: 48%;
     }
     .button-return-home{
-        top: 2%;
+        top: 1%;
+        right: 11%;
     }
     .question-image{
         max-width: 35%;
