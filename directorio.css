@@ -235,13 +235,16 @@ h1 {
     .ham-menu span{
         height: 0.2rem;
         width: 2rem;
-        left: 2.3rem;
-        margin-top: 1.5rem;
+        left: 1.5rem;
+        margin-top: 0.7rem;
     }
-    .off-screen-menu{
+    .off-screen-menu {
         font-size: 0.8rem;
         margin-left: 0.1rem;
-
+    }
+    .off-screen-menu.active{
+        left: 1.2rem;
+        top: 0.2rem;
     }
 
     h1{
@@ -279,55 +282,31 @@ h1 {
 
 /* Para móviles (max-width: 767px) */
 @media (max-width: 767px) {
-    li{
-        margin: 0.7rem;
-    }
-
-    .list-menu{
-        margin-top: 0.5rem;
-        font-size: 1.5rem;
-        font-weight: 700;
-    }
-    .ham-menu{
-        height: 1.5rem;
-        width: 3rem;
-        margin-top: 3%;
-        margin-left: 3%;
-    }
-    .ham-menu span{
-        height: 0.2rem;
-        width: 2rem;
-        left: 1.5rem;
-        margin-top: 0.7rem;
-    }
-    .off-screen-menu{
-        font-size: 0.8rem;
-        margin-left: 0.1rem;
-
-    }
     .off-screen-menu.active{
-        left: 1.7rem;
-        top: 0.5rem;;
+        left: 1.2rem;
+        top: 0.2rem;
     }
-    .h1{
-        font-size: 2.5rem;
-    }
-
-    #boton-scroll{
-
-    }
-    .filter-container{
-        font-size: 1.2rem;
-    }
-    .button-return-home{
-        top: 2%;
-        right: 3%;
-        max-width: 15%;
+    .ham-menu span {
+        width: 50%; /* Ajustar el tamaño del menú hamburguesa en móviles */
     }
 }
 
 /* Para tabletas (min-width: 768px y max-width: 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
+
+    .list-menu{
+        margin-top: 2rem;
+    }
+
+    .off-screen-menu{
+        font-size: 1.1rem;
+        margin-left: -7rem;
+    }
+
+    .off-screen-menu.active{
+        left: 12rem;
+        top: 0.8rem;
+    }
 
     h1{
         margin-top: 11%;
@@ -343,6 +322,16 @@ h1 {
     .off-screen-menu.active{
         left: 12rem;
         top: 0.8rem;
+    }
+
+    ham-menu {
+        width: 8%;
+    }
+
+    .ham-menu span {
+        width: 70%; /* Ajustar el tamaño del menú hamburguesa */
+        left: 3rem;
+        margin-top: 1rem;
     }
 }
 
