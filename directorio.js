@@ -61,3 +61,13 @@ function filterEntities() {
 
 // Llamar a la función para cargar las entidades al cargar la página
 window.onload = loadEntities;
+
+// script.js
+document.getElementById('boton-scroll').addEventListener('click', function() {
+    // Desplazarse hacia arriba hasta el inicio de la página
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Hace que el desplazamiento sea suave
+    });
+  });
+  
