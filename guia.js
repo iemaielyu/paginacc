@@ -1,89 +1,143 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const guideContainer = document.getElementById("guide-container");
-
-    // Fetch deficiencias.json and condiciones.json
+    // Cargar los datos de deficiencias.json y condiciones.json
     Promise.all([
-        fetch('deficiencias.json').then(response => response.json()),
-        fetch('condiciones.json').then(response => response.json())
+        fetch("deficiencias.json").then(response => response.json()),
+        fetch("condiciones.json").then(response => response.json())
     ]).then(([deficiencias, condiciones]) => {
-        deficiencias.forEach((deficiencia, index) => {
-            // Create each card
+        const container = document.getElementById("cards-container");
+
+        deficiencias.forEach(deficiencia => {
+            // Crear la tarjeta
             const card = document.createElement("div");
-            card.className = "guide-card";
-            card.innerHTML = `
-                <div class="card-icon">${deficiencia.icono}</div>
-                <div class="card-content" id="content-${index}">
-                    <h4>${deficiencia.nombre}</h4>
-                    <p>${deficiencia.descripcion}</p>
-                    <div class="related-conditions">
-                        <p>Related:</p>
-                        <ul id="related-${index}"></ul>
-                    </div>
-                    <div class="slideshow" id="slideshow-${index}">
-                        <div class="slideshow-content"></div>
-                        <div class="slideshow-nav">
-                            <button onclick="prevSlide(${index})">Prev</button>
-                            <button onclick="nextSlide(${index})">Next</button>
-                        </div>
-                    </div>
-                    <button class="button-more-info" onclick="showMoreInfo(${index})">Ver más información</button>
-                </div>
-            `;
-            
-            guideContainer.appendChild(card);
+            card.classList.add("card");
 
-            // Populate related conditions
-            const relatedList = document.getElementById(`related-${index}`);
-            condiciones
-                .filter(cond => cond.categoria === deficiencia.tag)
-                .forEach(cond => {
-                    const listItem = document.createElement("li");
-                    listItem.textContent = cond.nombre;
-                    relatedList.appendChild(listItem);
-                });
+            // Imagen de la tarjeta
+            const img = document.createElement("img");
+            img.src = deficiencia.icon;
+            img.alt = deficiencia.nombre;
+            card.appendChild(img);
 
-            // Populate slideshow with filtered conditions
-            const slideshowContent = document.getElementById(`slideshow-${index}`).querySelector(".slideshow-content");
-            condiciones
-                .filter(cond => cond.categoria === deficiencia.tag)
-                .forEach((cond, condIndex) => {
-                    const slide = document.createElement("div");
-                    slide.className = "slide";
-                    slide.innerHTML = `
-                        <h5>${cond.nombre}</h5>
-                        <p><strong>Síntomas:</strong> ${cond.sintomas}</p>
-                        <p><strong>Causas:</strong> ${cond.causas}</p>
-                        <p><strong>Preclínico:</strong> ${cond.preclinico}</p>
-                    `;
-                    slide.classList.add(condIndex === 0 ? "active" : "");
-                    slideshowContent.appendChild(slide);
-                });
+            // Contenido de la tarjeta
+            const content = document.createElement("div");
+            content.classList.add("card-content");
 
-            // Toggle card expansion
-            card.addEventListener("click", () => {
-                const content = document.getElementById(`content-${index}`);
-                content.style.display = content.style.display === "block" ? "none" : "block";
+            // Nombre y descripción
+            const title = document.createElement("h3");
+            title.textContent = deficiencia.nombre;
+            content.appendChild(title);
+
+            const description = document.createElement("p");
+            description.textContent = deficiencia.descripcion;
+            content.appendChild(description);
+
+            // Botón Ver condiciones
+            const button = document.createElement("button");
+            button.textContent = "Ver condiciones";
+            content.appendChild(button);
+
+            // Sección para el slideshow
+            const slideshowContainer = document.createElement("div");
+            slideshowContainer.classList.add("slideshow-container");
+            slideshowContainer.style.display = "none"; // Oculto al inicio
+
+            let currentSlide = 0;
+
+            // Obtener y mostrar condiciones relacionadas con el tag
+            const relatedConditions = condiciones.filter(condicion => condicion.categoria === deficiencia.tag);
+
+            // Crear slides y puntos de navegación
+            relatedConditions.forEach((condicion, index) => {
+                const slide = document.createElement("div");
+                slide.classList.add("slide");
+                slide.style.display = index === 0 ? "block" : "none"; // Mostrar solo la primera
+
+                const conditionImage = document.createElement("img");
+                conditionImage.src = condicion.imagen;
+                conditionImage.alt = condicion.nombre;
+                slide.appendChild(conditionImage);
+
+                const conditionName = document.createElement("h4");
+                conditionName.textContent = condicion.nombre;
+                slide.appendChild(conditionName);
+
+                const conditionSymptoms = document.createElement("p");
+                conditionSymptoms.textContent = `Síntomas: ${condicion.sintomas}`;
+                slide.appendChild(conditionSymptoms);
+
+                const conditionCauses = document.createElement("p");
+                conditionCauses.textContent = `Causas: ${condicion.causas}`;
+                slide.appendChild(conditionCauses);
+
+                const conditionPreclinical = document.createElement("p");
+                conditionPreclinical.textContent = `Preclínico: ${condicion.preclinico}`;
+                slide.appendChild(conditionPreclinical);
+
+                slideshowContainer.appendChild(slide);
             });
+
+            // Crear controles de navegación
+            const prevButton = document.createElement("button");
+            prevButton.classList.add("prev");
+            prevButton.textContent = "❮";
+            prevButton.onclick = () => changeSlide(-1);
+            slideshowContainer.appendChild(prevButton);
+
+            const nextButton = document.createElement("button");
+            nextButton.classList.add("next");
+            nextButton.textContent = "❯";
+            nextButton.onclick = () => changeSlide(1);
+            slideshowContainer.appendChild(nextButton);
+
+            // Puntos de navegación
+            const dotsContainer = document.createElement("div");
+            dotsContainer.classList.add("dots-container");
+
+            relatedConditions.forEach((_, index) => {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                dot.onclick = () => setCurrentSlide(index);
+                dotsContainer.appendChild(dot);
+            });
+            slideshowContainer.appendChild(dotsContainer);
+
+            // Función para cambiar de slide
+            function changeSlide(n) {
+                currentSlide = (currentSlide + n + relatedConditions.length) % relatedConditions.length;
+                showSlide();
+            }
+
+            function setCurrentSlide(n) {
+                currentSlide = n;
+                showSlide();
+            }
+
+            function showSlide() {
+                const slides = slideshowContainer.querySelectorAll(".slide");
+                const dots = dotsContainer.querySelectorAll(".dot");
+
+                slides.forEach((slide, index) => {
+                    slide.style.display = index === currentSlide ? "block" : "none";
+                });
+
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle("active", index === currentSlide);
+                });
+            }
+
+            // Mostrar u ocultar el slideshow al hacer click en el botón
+            button.addEventListener("click", () => {
+                const allSlideshows = document.querySelectorAll(".slideshow-container");
+                allSlideshows.forEach(slideshow => slideshow.style.display = "none"); // Colapsa otros
+
+                slideshowContainer.style.display = slideshowContainer.style.display === "none" ? "block" : "none";
+                currentSlide = 0;
+                showSlide();
+            });
+
+            content.appendChild(slideshowContainer);
+            card.appendChild(content);
+            container.appendChild(card);
         });
-    });
+    }).catch(error => console.error("Error al cargar los archivos JSON:", error));
 });
 
-function showMoreInfo(index) {
-    document.getElementById(`slideshow-${index}`).style.display = 'block';
-}
-
-function prevSlide(index) {
-    const slides = document.querySelector(`#slideshow-${index} .slideshow-content`).children;
-    let activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
-    slides[activeIndex].classList.remove('active');
-    activeIndex = (activeIndex - 1 + slides.length) % slides.length;
-    slides[activeIndex].classList.add('active');
-}
-
-function nextSlide(index) {
-    const slides = document.querySelector(`#slideshow-${index} .slideshow-content`).children;
-    let activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
-    slides[activeIndex].classList.remove('active');
-    activeIndex = (activeIndex + 1) % slides.length;
-    slides[activeIndex].classList.add('active');
-}
