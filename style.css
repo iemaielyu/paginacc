@@ -140,7 +140,7 @@ a{
 .boton {
     flex: 1; /* Todos los botones ocupan el mismo ancho */
     padding: 15px 20px; /* Espaciado dentro del botón */
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-family: 'montserrat';
     text-align: center;
     background-color: rgb(18, 20, 74);
@@ -343,11 +343,12 @@ a{
 .header-welcome{
     color: white;
     margin-bottom: 2rem;
+    font-size: 3rem;
 }
 
 .welcome-screen {
     font-family: 'montserrat';
-    font-weight: 500;
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -362,7 +363,8 @@ a{
     left: 2.5%;
     right: 2.5%;
     color: rgb(62, 227,148); /* Font color for the welcome message */
-    font-size: 1.3rem;
+    font-size: 1rem;
+    line-height: 1.1rem;
 } 
 
 .welcome-screen.fade-out {

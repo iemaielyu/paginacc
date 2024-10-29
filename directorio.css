@@ -20,6 +20,10 @@ a{
     color: white;
 }
 
+main{
+    background-color: white;
+}
+
 /* Estilo para el burguer menu */
 
 .off-screen-menu{
@@ -114,7 +118,7 @@ h1 {
     text-align: center;
     background-color: #1a2165;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding-bottom: 1.5rem;
 }
 
@@ -130,7 +134,7 @@ h1 {
 
 .info-filter{
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 1.5rem;
     padding: 1.5rem;
 }
 
@@ -155,17 +159,21 @@ h1 {
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     color: #1a2165;
+    justify-content: center;
+    height: 100%;
+    line-height: 1.1rem;
 }
 
 .grid-item img {
-    width: 100%;
+    width: 50%;
     height: auto;
     margin-bottom: 10px;
+    margin-left: 25%;
 }
 
 .grid-item h4 {
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 600;
     text-align: center;
 }
@@ -173,7 +181,7 @@ h1 {
 /* Prevent email overflow */
 .grid-item p {
     margin: 5px 0;
-    font-size: 14px;
+    font-size: 0.9rem;
     word-wrap: break-word;   /* Ensures long words (like emails) break within boundaries */
     overflow-wrap: break-word;
 }
@@ -182,39 +190,10 @@ h1 {
 .grid-item a {
     color: #007bff;
     text-decoration: none;
-    word-break: break-all;   /* Break long email addresses to fit within the card */
 }
 
 .grid-item a:hover {
     text-decoration: underline;
-}
-
-/* Diseño para la página de resultados.hmtl */
-
-.button-container{
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between buttons */
-    width: 100%;
-    padding: 1rem;
-    cursor: pointer;
-    transition: background-color 0.7s ease;
-    background-color: white;
-    font: 'montserrat';
-}
-
-.button-print{
-    border: none;
-    background-color: #1a2165;
-    color: white;
-    padding: 0.5rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.7s;
-}
-
-.button-print:hover{
-    background-color: #007bff;
 }
 
 /* Media queries para responsive design */

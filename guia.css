@@ -5,31 +5,133 @@
     font-family: Montserrat, sans-serif;
 }
 
+body {
+    font-family: 'montserrat';
+    background-color: #1a2165;
+}
+
+ul{
+    list-style: none;
+    border-style: none;
+}
+
+li{
+    margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Estilo para el burguer menu */
+
+.off-screen-menu{
+    font-size: 0.9rem;
+    color: white;
+    position: fixed;
+    top: 2rem;
+    left: -15rem;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: -5rem;
+    transition: .3s ease;
+    width: 10rem;
+    height: 10.5rem;
+}
+
+.off-screen-menu.active{
+    left: 10rem;
+    background-color: none;
+}
+
+.off-screen-menu ul li:hover {
+    cursor: pointer;
+    background-color: #ffc107;
+    border-radius: 2rem;
+    transition: 0.7s;
+}
+
+.ham-menu{
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    margin-right: auto;
+    position: relative;
+}
+
+.ham-menu span{
+    height: 0.4rem;
+    width: 80%;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 4rem;
+    margin-top: 2rem;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.ham-menu span:nth-child(1){
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3){
+    top: 77%;
+}
+
+.ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2){
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, -40%) rotate(-45deg);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 2%;
+    color: white;
+    font-weight: 700;
+    font-size: 3rem;
+    width: 100%;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2rem;
     justify-content: center;
-    padding: 20px;
+    padding: 1rem;
+    color: white;
 }
 
 .card {
    /* display: flex; */
     flex-direction: column;
     align-items: center;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: none;
+    border: none;
     transition: transform 0.3s ease;
-    padding: 15px;
-
-    max-width: 80%;     /* Define el ancho máximo para la tarjeta */
+    padding: 1rem;
+    max-width: 19%;     /* Define el ancho máximo para la tarjeta */
     width: fit-content; /* Adapta la tarjeta al tamaño de su contenido */
-
 }
 
 .card:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 .card img {
@@ -43,24 +145,26 @@
 .card-content {
     padding: 10px;
     text-align: left;
+    margin-top: 10%;
 }
 
 .card h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 10%;
+    font-weight: 800;
 }
 
 .card p {
-    font-size: 0.9em;
-    color: #666;
+    font-size: 1rem;
+    color: white;
     margin-bottom: 15px;
 }
 
 .card button {
     padding: 10px 15px;
-    font-size: 0.9em;
-    color: #fff;
-    background-color: #007bff;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(18, 20, 74);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -68,22 +172,27 @@
 }
 
 .card button:hover {
-    background-color: #0056b3;
+    background-color: rgb(92, 175,245);
 }
 
 .slideshow-container {
     position: relative;
     max-width: 100%;
     display: none;
+    font-size: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    color: #1a2165;
 }
 
 .slide {
     display: none;
-    text-align: center;
+    text-align: center;;
 }
 
 .active {
-    background-color: #717171;
+    background-color: none;
 }
 
 .dots-container {
@@ -101,15 +210,18 @@
     cursor: pointer;
 }
 
+.dot:hover{
+    background-color: rgb(92, 175,245);
+}
+
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
     padding: 8px;
-    color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1rem;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -125,22 +237,17 @@
 
 /* Estilo para las imágenes de cada slide */
 .slide img {
-    width: 100%;           /* Ajusta el ancho de la imagen al contenedor */
-    max-width: 300px;      /* Cambia el valor a tu gusto para controlar el tamaño máximo */
+    width: 60%;           /* Ajusta el ancho de la imagen al contenedor */
+    max-width: 100%;      /* Cambia el valor a tu gusto para controlar el tamaño máximo */
     height: auto;          /* Mantiene la proporción de la imagen */
     object-fit: contain;   /* Asegura que la imagen se ajuste sin recortarse */
-    margin: 0 auto;        /* Centra la imagen horizontalmente */
-    border-radius: 8px;    /* Añade bordes redondeados si lo deseas */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Opcional: sombra para destacar la imagen */
+    margin: 0 auto; 
+    padding-top: 1.5rem; 
+    padding-bottom: 1.5rem;      /* Centra la imagen horizontalmente */
 }
 
 /* Para ajustar la escala de las imágenes cuando el slide está activo */
 .slide.active img {
     transform: scale(0.9); /* Cambia el valor según el tamaño deseado */
     transition: transform 0.3s ease-in-out; /* Suaviza el cambio de escala */
-}
-
-body {
-    font-family: 'montserrat';
-    background-color: #1a2165;
 }
