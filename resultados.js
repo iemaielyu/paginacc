@@ -1,5 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const deficienciasContainer = document.getElementById('deficiencias-container');
     const gridContainer = document.getElementById('grid-container');
+    const showCentersButton = document.getElementById('showCentersButton');
+
+    // Cargar deficiencias desde el archivo JSON
+    async function loadDeficiencias() {
+        try {
+            const response = await fetch('deficiencias.json');
+
+            if (!response.ok) {
+                throw new Error(`Error al cargar el archivo JSON: ${response.statusText}`);
+            }
+
+            const deficiencias = await response.json();
+            const selectedCategories = JSON.parse(sessionStorage.getItem('selectedCategories')) || [];
+            const filteredDeficiencias = deficiencias.filter(def => selectedCategories.includes(def.tag));
+
+            displayDeficiencias(filteredDeficiencias);
+        } catch (error) {
+            console.error('Error al cargar las deficiencias:', error);
+            alert('Hubo un error al cargar las deficiencias. Revisa la consola para más detalles.');
+        }
+    }
+
+    // Mostrar las deficiencias en el contenedor
+    function displayDeficiencias(deficiencias) {
+        deficienciasContainer.innerHTML = '';
+    
+        deficiencias.forEach(def => {
+            const defDiv = document.createElement('div');
+            defDiv.classList.add('deficiencia-item');
+    
+            defDiv.innerHTML = `
+                <img src="${def.icon}" alt="${def.nombre}" class="deficiencia-icono">
+                <h4>${def.nombre}</h4>
+                <p>${def.descripcion}</p>
+            `;
+            deficienciasContainer.appendChild(defDiv);
+        });
+    }
 
     // Cargar entidades desde el archivo JSON
     async function loadEntities() {
@@ -73,6 +112,17 @@ document.addEventListener('DOMContentLoaded', () => {
         pdfWindow.print(); // Imprimir la nueva ventana
     });
 
-    // Cargar las entidades al cargar la página
-    loadEntities();
+    // Al hacer clic en el botón, mostrar los centros de atención
+    showCentersButton.addEventListener('click', () => {
+        gridContainer.classList.toggle('hidden'); // Alternar la visibilidad del contenedor de resultados
+        if (gridContainer.classList.contains('hidden')) {
+            showCentersButton.textContent = 'Ver posibles centros de atención'; // Cambiar el texto
+        } else {
+            showCentersButton.textContent = 'Ocultar centros de atención'; // Cambiar el texto
+            loadEntities(); // Cargar entidades si están visibles
+        }
+    });
+
+    // Cargar las deficiencias al cargar la página
+    loadDeficiencias();
 });

@@ -339,3 +339,9 @@ h1 {
 @media (min-width: 1025px) {
     
 }
+
+.deficiencia-icono {
+    width: 20%; /* Ajusta según lo necesario */
+    height: auto;
+    margin-bottom: 10px;
+}
