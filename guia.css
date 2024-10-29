@@ -146,6 +146,7 @@ h1{
     padding: 10px;
     text-align: left;
     margin-top: 10%;
+    color:white;
 }
 
 .card h3 {
@@ -189,7 +190,18 @@ h1{
 .slide {
     display: none;
     text-align: center;;
+    color: black;
 }
+
+
+.slide h3, 
+.slide p, 
+.slide span, 
+.slide a {
+    color: black; /* Asegura que todos los elementos de texto en el slide tengan color negro */
+}
+
+
 
 .active {
     background-color: none;
