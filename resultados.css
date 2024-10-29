@@ -168,3 +168,36 @@ p{
 #pdfButton{
     margin-left: 0.5%;
 }
+
+@media (max-width: 480px) {
+
+    li{
+        margin: 0.7rem;
+    }
+
+    .list-menu{
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .ham-menu{
+        height: 1.5rem;
+        width: 3rem;
+    }
+    .ham-menu span{
+        height: 0.2rem;
+        width: 2rem;
+        left: 1.5rem;
+        margin-top: 0.7rem;
+    }
+    .off-screen-menu{
+        font-size: 0.8rem;
+        margin-left: 0.1rem;
+
+    }
+    .off-screen-menu.active{
+        left: 1.2rem;
+        top: 0.2rem;
+    }
+    
+  }

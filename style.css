@@ -606,6 +606,10 @@ body{
 /* Media queries para responsive design */
 @media (max-width: 480px) {
 
+    .header-welcome{
+        font-size: 1.5rem;
+    }
+
     .welcome-screen{
         font-size: 0.8rem;
         left: 2%;
