@@ -124,14 +124,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             }
 
-            // Mostrar u ocultar el slideshow al hacer click en el botón
+            // Toggle del slideshow y texto del botón
             button.addEventListener("click", () => {
-                const allSlideshows = document.querySelectorAll(".slideshow-container");
-                allSlideshows.forEach(slideshow => slideshow.style.display = "none"); // Colapsa otros
+                const isHidden = slideshowContainer.style.display === "none";
 
-                slideshowContainer.style.display = slideshowContainer.style.display === "none" ? "block" : "none";
-                currentSlide = 0;
-                showSlide();
+                // Cambia el estado del slideshow
+                slideshowContainer.style.display = isHidden ? "block" : "none";
+
+                // Actualiza el texto del botón
+                button.textContent = isHidden ? "Ocultar condiciones" : "Ver condiciones";
             });
 
             content.appendChild(slideshowContainer);
