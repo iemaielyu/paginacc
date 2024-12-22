@@ -1,267 +1,400 @@
  [
-    {
-      "nombre": "ADISA",
-      "direccion": "Santiago Atitlán, Sololá",
-      "telefono": "77217919",
-      "email": "adisasalud@gmail.com",
-      "logo": "entidades/adisa.png",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "ADISA",
-      "direccion": "Cantón Tzanchicham, Santiago Atitlán Sololá",
-      "telefono": "77217919",
-      "email": "ponsetiadisa@gmail.com",
-      "logo": "entidades/adisa.png",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "AIDEPCE",
-      "direccion": "Barrio San Juan, zona 4, Cubulco, Baja Verapaz.",
-      "telefono": "79545261",
-      "email": "cubulcoaidepce@hotmail.com",
-      "logo": "entidades/aidepce.jpg",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Asociacion Asperger Guatemala ",
-      "direccion": "5ta. Av. A 16-19 zona 11 Mixco. Colinas de Minerva (alquilado)",
-      "telefono": "47417916",
-      "email": "unaluzdeamorasperger@gmail.com",
-      "logo": "entidades/asociacion_asperger.jpg",
-      "categorias": ["cognitiva"]
-    },
-    {
-      "nombre": "Asociación De Capacitación Y Asistencia Técnica En Educación Y Discapacidad",
-      "direccion": "2da. Avenida 5-47 zona 1, Guatemala",
-      "telefono": "22200631",
-      "email": "ascated1@gmail.com",
-      "logo": "entidades/ascated.jpg",
-      "categorias": ["visual"]
-    },
-    {
-      "nombre": "Asociación de Padres y Amigos de Personas con Discapacidad que podrá abreviarse ASOPADIS",
-      "direccion": "Sector La Puerta Paraje Pacoc San Lucas Tolimán, 07013",
-      "telefono": "53286830",
-      "email": "rpasopadis@gmail.com",
-      "logo": "entidades/asopadis.png",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Asociación Educativa para el Sordo (ASEDES)",
-      "direccion": "7a. Av 14-44 zona 9 Edificio la Galeria, oficina 1",
-      "telefono": "23312123",
-      "email": "info@asedesguatemala.org",
-      "logo": "entidades/asedes.png",
-      "categorias": ["auditiva"]
-    },
-    {
-      "nombre": "Asociación Grupo Ermita Alzheimer de Guatemala",
-      "direccion": "10 avenida A 1-48 zona 1",
-      "telefono": "22320324",
-      "email": "info@ermitaalzheimer.org.gt",
-      "logo": "entidades/grupo_ermita.png",
-      "categorias": ["cognitiva"]
-    },
-    {
-      "nombre": "Asociación Guatemalteca de Apoyo al Limitado Fisico",
-      "direccion": "Ciudad de Guatemala",
-      "telefono": "46525565",
-      "email": "agalfi@hotmail.com",
-      "logo": "entidades/agalfi.png",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Asociación Guatemalteca de Esclerosis Múltiple",
-      "direccion": "21 calle \"C\" 14-74 zona 11 Col. Granai III, Guatemala City",
-      "telefono": "55943408",
-      "email": "asogemguatemala@gmail.com",
-      "logo": "entidades/asogem.png",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Asociación Guatemalteca de Personas Con Discapacidad, AGPD \"Manuel Tot\" ONG.",
-      "direccion": "1era. avenida \"B\" 2-55 Zona 1, Barrio La Recolección.",
-      "telefono": "22538356",
-      "email": "agpdgua@gmail.com",
-      "logo": "entidades/agpd.png",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Asociación Rompiendo Límites",
-      "direccion": "Jocotán, Chiquimula",
-      "telefono": "77260726",
-      "email": "asociacion@rompiendolimites.org.gt",
-      "logo": "entidades/asoro.png",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Asociación Somos Hijos del Lago",
-      "direccion": "7ma calle, 07-66 zona 1, Cantón Pacuchá",
-      "telefono": "77218139",
-      "email": "somoshijosdellago@yahoo.com",
-      "logo": "entidades/sohilago.png",
-      "categorias": ["fisica","cognitiva"]
-    },
-    {
-      "nombre": "Asociacion Transiciones para personas con discapacidad",
-      "direccion": "Callejon Los Horcones No 48, San Felipe de Jesus, Antigua Gua",
-      "telefono": "78310779",
-      "email": "rebecca@transitionsfoundation.org",
-      "logo": "entidades/transiciones.png",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "ASORGUA - Asociación de Sordos de Guatemala",
-      "telefono": "22191538",
-      "email": "asorgua@gmail.com",
-      "logo": "entidades/asorgua.jpeg",
-      "categorias": ["auditiva"]
-    },
-    {
-      "nombre": "Beeline Wheelchairs",
-      "direccion": "Carretera Interamericana CA1 Km 40 entrada a Santo Domingo Xenacoj, Sacatepéquez,Guatemala",
-      "telefono": "30717584",
-      "email": "info@beelinewheelchairs.org",
-      "logo": "entidades/beeline.jpg",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Benemérito Comité Pro-Ciegos y Sordos de Guatemala",
-      "direccion": "9 calle 3-07 zona 1, Ciudad de Guatemala",
-      "telefono": "23821800",
-      "email": "isantos@prociegosysordos.org.gt",
-      "logo": "entidades/pro-ciegos.png",
-      "categorias": ["visual"]
-    },
-    {
-      "nombre": "Bitol",
-      "direccion": "san miguel ixtahuacan",
-      "telefono": "50253483226",
-      "email": "bahrens3727@gmail.com",
-      "logo": "entidades/bitol.jpeg",
-      "categorias": ["fisica","cognitiva"]
-    },
-    {
-      "nombre": "Centro Educativo para Sordos",
-      "direccion": "Calle Real Residencial El Pedregal # 3 Jocotenango, Sacatepéquez",
-      "telefono": "45986417",
-      "email": "lavosi09@gmail.com",
-      "logo": "entidades/voces_del_silencio.jpeg",
-      "categorias": ["auditiva"]
-    },
-    {
-      "nombre": "Centro Maya Servicio Integral",
-      "direccion": "3ra. Avenida 3-36 zona 2 San Juan La Laguna Sololá",
-      "telefono": "78236510",
-      "email": "direccioncentromayasi@gmail.com",
-      "logo": "entidades/centro_maya.png",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Centro Maya Servicio Integral",
-      "direccion": "Zona 2, Cantón Tzanjay, San Juan La Laguna Sololá",
-      "telefono": "78236510",
-      "email": "centromayasicoordinacion@gmail.com",
-      "logo": "entidades/centro_maya.png",
-      "categorias": ["fisica","cognitiva"]
-    },
-    {
-      "nombre": "Clínica Stela",
-      "direccion": "12 avenida 19-33 zona 7 de Mixco",
-      "telefono": "22157777",
-      "email": "guatemala@clinicastela.com",
-      "logo": "entidades/stela.jpeg",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Corazones en Movimiento",
-      "direccion": "Teculután, Zacapa",
-      "telefono": "30812864",
-      "email": "yazmin@heartsinmotion.org",
-      "logo": "entidades/corazones_en_movimiento.jpeg",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Escuela de Fisioterapia Universidad Mariano Gálvez de Guatemala",
-      "direccion": "7ma. calle 7-77 zona 2",
-      "telefono": "22541312",
-      "email": "guadalupe.lopez@umg.edu.gt",
-      "logo": "entidades/umg.jpeg",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Fundaciòn Artes Muy Especiales",
-      "direccion": "5 calle 10-55 zona 13",
-      "telefono": "59501508",
-      "email": "artesmuyespeciales@gmmail.com",
-      "logo": "entidades/ame.jpg",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Fundacion Margarita Tejada",
-      "direccion": "4 ave. 12-20 zona 16, Acatán",
-      "telefono": "22081999",
-      "email": "direccion21@fundacionmargaritatejada.org",
-      "logo": "entidades/margarita_tejada.png",
-      "categorias": ["cognitiva"]
-    },
-    {
-      "nombre": "FUNDAL: Fundación Alex",
-      "direccion": "1a calle y Carretera Interamericana 0-20 zona 1 de mixco, Guatemala",
-      "telefono": "24917878",
-      "email": "diana.bonilla@fundal.org.gt",
-      "logo": "entidades/fundal.png",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Las voces del silencio LAVOSI",
-      "direccion": "10 calle 11-13 zona 3 de Mixco, Nueva Monteserrat",
-      "telefono": "22128818",
-      "email": "info@downguatemala.org",
-      "logo": "entidades/voces_del_silencio.jpeg",
-      "categorias": ["cognitiva"]
-    },
-    {
-      "nombre": "Obras Sociales del Santo Hermano Pedro",
-      "direccion": "6a. Calle Oriente No. 20, Antigua Guatemala",
-      "telefono": "79312100",
-      "email": "asociacion@obrashermanopedro.org",
-      "logo": "entidades/hermano_pedro.png",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Range of Motion Project NFP",
-      "direccion": "1ra Calle, 25-62, Zona 15, Colonia Vista Hermosa 2. Ciudad de Guatemala",
-      "telefono": "30499471",
-      "email": "jose@rompglobal.org",
-      "logo": "entidades/romp.png",
-      "categorias": ["fisica"]
-    },
-    {
-      "nombre": "Visualiza",
-      "direccion": "4 avenida A 11-54 Zona 9",
-      "telefono": "24140900",
-      "email": "juan.yee@visualiza.org.gt",
-      "logo": "entidades/visualiza.png",
-      "categorias": ["visual"]
-    },
-    {
-      "nombre": "Centro de Aprendizaje y Rehabilitación Integral ARI",
-      "direccion": "Antigua Guatemala",
-      "telefono": "37428917",
-      "email": "cari.direccion@gmail.com",
-      "logo": "entidades/ari.jpg",
-      "categorias": ["fisica","cognitiva","visual","auditiva"]
-    },
-    {
-      "nombre": "Instituto Neurológico de Guatemala",
-      "direccion": "9a. avenida 5-51 zona 11 Col. Roosevelt",
-      "telefono": "24711613",
-      "email": "gestionlaboral@institutoneurologicodeguatemala.org",
-      "logo": "entidades/instituto_neurológico.jpg",
-      "categorias": ["cognitiva"]
-    }
+  {
+    "nombre": "ADISA",
+    "direccion": "Santiago Atitlán, Sololá",
+    "telefono": "77217919",
+    "email": "adisasalud@gmail.com",
+    "logo": "entidades/adisa.png",
+    "categorias": "fisica",
+    "horario": "8 am a 4:00 pm de lunes a viernes",
+    "servicios": "Educacion, Emprendimiento economico, empoderamiento social, Clinica dental, fisioterapia, terapia ocupacional, estimulacion oportuna, psicologia",
+    "atendidas": "Paralisis cerebral, pie equino varo, retraso psico motor, lesiones por accidentes en moto.",
+    "area": "Sololá"
+  },
+  {
+    "nombre": "ADISA",
+    "direccion": "Cantón Tzanchicham, Santiago Atitlán Sololá",
+    "telefono": "77217919",
+    "email": "ponsetiadisa@gmail.com",
+    "logo": "entidades/adisa.png",
+    "categorias": "fisica",
+    "horario": "8:00 a.m. a 4:00 p.m.",
+    "servicios": "Terapia física, estimulación oportuna, salud mental, educación inclusiva, asesoría en temas de discapacidad",
+    "atendidas": "Pie equino varo, entre otras",
+    "area": "Chiquimula, Huehuetenango, Petén, Quetzaltenango, San Marcos, Sololá"
+  },
+  {
+    "nombre": "AIDEPCE",
+    "direccion": "Barrio San Juan, zona 4, Cubulco, Baja Verapaz.",
+    "telefono": "79545261",
+    "email": "cubulcoaidepce@hotmail.com",
+    "logo": "entidades/aidepce.jpg",
+    "categorias": "fisica",
+    "horario": "Lunes a Viernes. De 08 a 17 horas",
+    "servicios": "Educación, rehabilitación e inclusión.",
+    "atendidas": "Todos",
+    "area": "Baja Verapaz"
+  },
+  {
+    "nombre": "Asociacion Asperger Guatemala ",
+    "direccion": "5ta. Av. A 16-19 zona 11 Mixco. Colinas de Minerva (alquilado)",
+    "telefono": "47417916",
+    "email": "unaluzdeamorasperger@gmail.com",
+    "logo": "entidades/asociacion_asperger.jpg",
+    "categorias": "cognitiva",
+    "horario": "sabados de 8:00 a 17:00 horas",
+    "servicios": "Procesos Diagnósticos TEA/ASPERGER",
+    "atendidas": "Trastorno del Espectro del Autismo TEA/Asperger.",
+    "area": "Guatemala"
+  },
+  {
+    "nombre": "Asociación De Capacitación Y Asistencia Técnica En Educación Y Discapacidad",
+    "direccion": "2da. Avenida 5-47 zona 1, Guatemala",
+    "telefono": "22200631",
+    "email": "ascated1@gmail.com",
+    "logo": "entidades/ascated.jpg",
+    "categorias": "visual",
+    "horario": "No especificado",
+    "servicios": "No especificado",
+    "atendidas": "No especificado",
+    "area": "No especificada"
+  },
+  {
+    "nombre": "Asociación de Padres y Amigos de Personas con Discapacidad que podrá abreviarse ASOPADIS",
+    "direccion": "Sector La Puerta Paraje Pacoc San Lucas Tolimán, 07013",
+    "telefono": "53286830",
+    "email": "rpasopadis@gmail.com",
+    "logo": "entidades/asopadis.png",
+    "categorias": "fisica",
+    "horario": "De lunes a viernes de 08:00 a 12:30 hrs. y de 14:00 a 17:00 hrs",
+    "servicios": "Fisioterapia, Terapia de Lenguaje, Psicología, Acompañamiento médico y dotación de auxiliares, Desarrollo Ocupacional, Hidroterapia",
+    "atendidas": "Parálisis cerebral • Lesiones medulares • Hemiplejías • Retraso psicomotor • Acortamiento • Amputaciones • Espina Bífida • Lesión de plexo braquial • Parálisis facial • Fractura",
+    "area": "Sololá"
+  },
+  {
+    "nombre": "Asociación Educativa para el Sordo (ASEDES)",
+    "direccion": "7a. Av 14-44 zona 9 Edificio la Galeria, oficina 1",
+    "telefono": "23312123",
+    "email": "info@asedesguatemala.org",
+    "logo": "entidades/asedes.png",
+    "categorias": "auditiva",
+    "horario": "No especificado",
+    "servicios": "No especificado",
+    "atendidas": "No especificado",
+    "area": "No especificada"
+  },
+  {
+    "nombre": "Asociación Grupo Ermita Alzheimer de Guatemala",
+    "direccion": "10 avenida A 1-48 zona 1",
+    "telefono": "22320324",
+    "email": "info@ermitaalzheimer.org.gt",
+    "logo": "entidades/grupo_ermita.png",
+    "categorias": "cognitiva",
+    "horario": "No especificado",
+    "servicios": "No especificado",
+    "atendidas": "No especificado",
+    "area": "No especificada"
+  },
+  {
+    "nombre": "Asociación Guatemalteca de Apoyo al Limitado Fisico",
+    "direccion": "Ciudad de Guatemala",
+    "telefono": "46525565",
+    "email": "agalfi@hotmail.com",
+    "logo": "entidades/agalfi.png",
+    "categorias": "fisica",
+    "horario": "domingos de 9:00 a 12:00 horas",
+    "servicios": "Básquetbol sobre silla de ruedas,",
+    "atendidas": "Principalmente paraplejia",
+    "area": "Guatemala"
+  },
+  {
+    "nombre": "Asociación Guatemalteca de Esclerosis Múltiple",
+    "direccion": "21 calle \"C\" 14-74 zona 11 Col. Granai III, Guatemala City",
+    "telefono": "55943408",
+    "email": "asogemguatemala@gmail.com",
+    "logo": "entidades/asogem.png",
+    "categorias": "fisica",
+    "horario": "Lunes a Viernes 8:00-16:00 hrs, Sábados 9:00-13:00hrs",
+    "servicios": "Terapias Psicológicas, Terapias Físicas",
+    "atendidas": "Fatiga Problemas de movilidad: afecta la función de los nervios que controlan los músculos Espasticidad muscular Problemas de equilibrio y coordinación: Debilidad muscular Problemas de marcha",
+    "area": "Guatemala"
+  },
+  {
+    "nombre": "Asociación Guatemalteca de Personas Con Discapacidad, AGPD \"Manuel Tot\" ONG.",
+    "direccion": "1era. avenida \"B\" 2-55 Zona 1, Barrio La Recolección.",
+    "telefono": "22538356",
+    "email": "agpdgua@gmail.com",
+    "logo": "entidades/agpd.png",
+    "categorias": "fisica",
+    "horario": "8.00am. a 4.30pm",
+    "servicios": "Sensibilización sobre salud preventiva y alternativa; Atención medica, medios auxiliares y emergencias",
+    "atendidas": "amputación, vista.",
+    "area": "Alta Verapaz, Baja Verapaz, Chimaltenago, Guatemala, Escuintla, Huehuetenango, Petén, Quiché, Retalhuleu, Suchitepequez"
+  },
+  {
+    "nombre": "Asociación Rompiendo Límites",
+    "direccion": "Jocotán, Chiquimula",
+    "telefono": "77260726",
+    "email": "asociacion@rompiendolimites.org.gt",
+    "logo": "entidades/asoro.png",
+    "categorias": "fisica",
+    "horario": "8 a 5 de la tarde de lunes a viernes",
+    "servicios": "La Asociación trabaja para promover el desarrollo inclusivo para personas con discapacidad",
+    "atendidas": "Todas y con mayor especialidad en personas con Espina Bífida e Hidrocefalia",
+    "area": "Chiquimula"
+  },
+  {
+    "nombre": "Asociación Somos Hijos del Lago",
+    "direccion": "7ma calle, 07-66 zona 1, Cantón Pacuchá",
+    "telefono": "77218139",
+    "email": "somoshijosdellago@yahoo.com",
+    "logo": "entidades/sohilago.png",
+    "categorias": "fisica,cognitiva",
+    "horario": "Lunes a viernes, 08:00 am - 12:00 pm y 02:00 pm - 05:00 pm",
+    "servicios": "Fisioterapia, Terapia de Lenguaje, Psicología, Musicoterapia",
+    "atendidas": "Lesiones espinales, pie equinovaro, parálisis cerebral, lesión medular, distrofia muscular progresiva y demás deficiencias físicas",
+    "area": "Sololá"
+  },
+  {
+    "nombre": "Asociacion Transiciones para personas con discapacidad",
+    "direccion": "Callejon Los Horcones No 48, San Felipe de Jesus, Antigua Gua",
+    "telefono": "78310779",
+    "email": "rebecca@transitionsfoundation.org",
+    "logo": "entidades/transiciones.png",
+    "categorias": "fisica",
+    "horario": "8am-1pm y 2pm a 5pm, lunes a viernes",
+    "servicios": "Fabricacion y reparacion de sillas de ruedas; clinica de protesis y ortesis; Fisioterapia; Andadores, bastones, verticalizadores; Deporte adaptado",
+    "atendidas": "Discapacidades de movilidad, incl: Lesiones medulares, amputaciones, polio, pie equinovaro y otras condiciones de nacimiento, paralisis cerebral, espina bifida, microcefalia, hidrocefalia, esclerosis multiple, derrames, edad avanzada",
+    "area": "Alta Verapaz, Baja Verapaz, Chimaltenago, Chiquimula, Guatemala, El Progreso, Escuintla, Huehuetenango, Izabal, Jalapa, Jutiapa, Petén, Quetzaltenango, Quiché, Retalhuleu, Sacatepequez, San Marcos, Santa Rosa, Sololá, Suchitepequez, Totonicapán, Zacapa"
+  },
+  {
+    "nombre": "ASORGUA - Asociación de Sordos de Guatemala",
+    "direccion": "No especificada",
+    "telefono": "22191538",
+    "email": "asorgua@gmail.com",
+    "logo": "entidades/asorgua.jpeg",
+    "categorias": "auditiva",
+    "horario": "No especificado",
+    "servicios": "No especificado",
+    "atendidas": "No especificado",
+    "area": "No especificada"
+  },
+  {
+    "nombre": "Beeline Wheelchairs",
+    "direccion": "Carretera Interamericana CA1 Km 40 entrada a Santo Domingo Xenacoj, Sacatepéquez,Guatemala",
+    "telefono": "30717584",
+    "email": "info@beelinewheelchairs.org",
+    "logo": "entidades/beeline.jpg",
+    "categorias": "fisica",
+    "horario": "Lunes a Viernes de 7am a 4 pm",
+    "servicios": "Donación de Sillas de ruedas Pediátricas y Ortopédicas",
+    "atendidas": "Hidrocefalia,Microcefalia, Espina Bífida y cualquier impedimento de movilización en pacientes pediátricos",
+    "area": "Alta Verapaz, Baja Verapaz, Chimaltenago, Chiquimula, Guatemala, El Progreso, Escuintla, Huehuetenango, Izabal, Jalapa, Jutiapa, Petén, Quetzaltenango, Quiché, Retalhuleu, Sacatepequez, San Marcos, Santa Rosa, Sololá, Suchitepequez, Totonicapán, Zacapa"
+  },
+  {
+    "nombre": "Benemérito Comité Pro-Ciegos y Sordos de Guatemala",
+    "direccion": "9 calle 3-07 zona 1, Ciudad de Guatemala",
+    "telefono": "23821800",
+    "email": "isantos@prociegosysordos.org.gt",
+    "logo": "entidades/pro-ciegos.png",
+    "categorias": "visual",
+    "horario": "No especificado",
+    "servicios": "No especificado",
+    "atendidas": "No especificado",
+    "area": "No especificada"
+  },
+  {
+    "nombre": "Bitol",
+    "direccion": "san miguel ixtahuacan",
+    "telefono": "53483226",
+    "email": "bahrens3727@gmail.com",
+    "logo": "entidades/bitol.jpeg",
+    "categorias": "fisica,cognitiva",
+    "horario": "5-Aug",
+    "servicios": "terapia fisica y lenguaje",
+    "atendidas": "Teralpia y referencia para cirujia especial",
+    "area": "San Marcos"
+  },
+  {
+    "nombre": "Centro Educativo para Sordos",
+    "direccion": "Calle Real Residencial El Pedregal # 3 Jocotenango, Sacatepéquez",
+    "telefono": "45986417",
+    "email": "lavosi09@gmail.com",
+    "logo": "entidades/voces_del_silencio.jpeg",
+    "categorias": "auditiva",
+    "horario": "No especificado",
+    "servicios": "No especificado",
+    "atendidas": "No especificado",
+    "area": "No especificada"
+  },
+  {
+    "nombre": "Centro Maya Servicio Integral",
+    "direccion": "3ra. Avenida 3-36 zona 2 San Juan La Laguna Sololá",
+    "telefono": "78236510",
+    "email": "direccioncentromayasi@gmail.com",
+    "logo": "entidades/centro_maya.png",
+    "categorias": "fisica",
+    "horario": "8:00 a 17:00 horas",
+    "servicios": "Promoción de derechos humanos e inclusión de las personas con discapacidad, atendemos todos los tipos de Discapacidad y de todas las edades",
+    "atendidas": "Todas las descritas y otras todos los tipos de Discapacidad.",
+    "area": "Sololá"
+  },
+  {
+    "nombre": "Centro Maya Servicio Integral",
+    "direccion": "Zona 2, Cantón Tzanjay, San Juan La Laguna Sololá",
+    "telefono": "78236510",
+    "email": "centromayasicoordinacion@gmail.com",
+    "logo": "entidades/centro_maya.png",
+    "categorias": "fisica,cognitiva",
+    "horario": "8:00 AM a 5:00 pm",
+    "servicios": "Terapias de Psicología, terapias de lenguaje, terapias de fisioterapia, Programa de Música",
+    "atendidas": "Parálisis Cerebral, espina bífida, lesión medular, amputación",
+    "area": "Sololá"
+  },
+  {
+    "nombre": "Clínica Stela",
+    "direccion": "12 avenida 19-33 zona 7 de Mixco",
+    "telefono": "22157777",
+    "email": "guatemala@clinicastela.com",
+    "logo": "entidades/stela.jpeg",
+    "categorias": "fisica",
+    "horario": "De lunes a viernes de 7:00am a 8:00 pm y sábados de 8:00 am a 2:00pm",
+    "servicios": "Fisioterapia en traumatología y ortopedia, Fisioterapia pediatrica, fisioterapia geriátrica, fisioterapia neurológica, fisioterapia deportiva.",
+    "atendidas": "Dolores en columna y espalda, Parálisis facial, Dolor articular (Rodilla, tobillo, hombro, mano), Enfermedades neurológicas (Parálisis cerebral, embolias), Fracturas, luxaciones y esguinces, Fisioterapia post operatoria (columna, hombro, rodilla), Padecimientos reumatológicos, prevención de caídas, estimulación temprana, lesiones deportivas.",
+    "area": "Guatemala"
+  },
+  {
+    "nombre": "Corazones en Movimiento",
+    "direccion": "Teculután, Zacapa",
+    "telefono": "30812864",
+    "email": "yazmin@heartsinmotion.org",
+    "logo": "entidades/corazones_en_movimiento.jpeg",
+    "categorias": "fisica",
+    "horario": "Lunes a viernes de 8am a 4:30pm",
+    "servicios": "Terapia Física y Ocupacional",
+    "atendidas": "Fracturas, ACV, amputaciones, contusiones, traumas craneoencefalicos, lesiones medulares, lesiones neuronales, entre otros",
+    "area": "El Progreso, Izabal, Zacapa"
+  },
+  {
+    "nombre": "Escuela de Fisioterapia Universidad Mariano Gálvez de Guatemala",
+    "direccion": "7ma. calle 7-77 zona 2",
+    "telefono": "22541312",
+    "email": "guadalupe.lopez@umg.edu.gt",
+    "logo": "entidades/umg.jpeg",
+    "categorias": "fisica",
+    "horario": "lunes a viernes de 7:00 a 18:00 hrs. sábado de 7:00 a 13:00 hrs",
+    "servicios": "Fisioterapia",
+    "atendidas": "amputaciones, lesiones musculoesqueléticas, lesiones medulares, entre otros",
+    "area": "Guatemala, Huehuetenango"
+  },
+  {
+    "nombre": "Fundaciòn Artes Muy Especiales",
+    "direccion": "5 calle 10-55 zona 13",
+    "telefono": "59501508",
+    "email": "artesmuyespeciales@gmail.com",
+    "logo": "entidades/ame.jpg",
+    "categorias": "fisica",
+    "horario": "8:30 16:30",
+    "servicios": "Desarrollo integral de personas con discapacidad, talleres inclusivos de arte y recreaciòn",
+    "atendidas": "Todo tipo de discapaciad no solo fìsica",
+    "area": "Alta Verapaz, Guatemala, Petén, Quetzaltenango, Retalhuleu, Sololá, Suchitepequez"
+  },
+  {
+    "nombre": "Fundacion Margarita Tejada",
+    "direccion": "4 ave. 12-20 zona 16, Acatán",
+    "telefono": "22081999",
+    "email": "direccion21@fundacionmargaritatejada.org",
+    "logo": "entidades/margarita_tejada.png",
+    "categorias": "cognitiva",
+    "horario": "No especificado",
+    "servicios": "No especificado",
+    "atendidas": "No especificado",
+    "area": "No especificada"
+  },
+  {
+    "nombre": "FUNDAL: Fundación Alex",
+    "direccion": "1a calle y Carretera Interamericana 0-20 zona 1 de mixco, Guatemala",
+    "telefono": "24917878",
+    "email": "diana.bonilla@fundal.org.gt",
+    "logo": "entidades/fundal.png",
+    "categorias": "fisica",
+    "horario": "De lunes a jueves de 7:00 a 16:00hrs y viernes de 7:00 a 15:00hrs",
+    "servicios": "Educación Inclusiva, capacitación, rehabilitación",
+    "atendidas": "Programa de Fisioterapia para estudiantes con discapacidad física y Programa de Rehabilitación de Pie Equinovaro",
+    "area": "Guatemala, Huehuetenango, Quetzaltenango"
+  },
+  {
+    "nombre": "Las voces del silencio LAVOSI",
+    "direccion": "10 calle 11-13 zona 3 de Mixco, Nueva Monteserrat",
+    "telefono": "22128818",
+    "email": "info@downguatemala.org",
+    "logo": "entidades/voces_del_silencio.jpeg",
+    "categorias": "cognitiva",
+    "horario": "No especificado",
+    "servicios": "No especificado",
+    "atendidas": "No especificado",
+    "area": "No especificada"
+  },
+  {
+    "nombre": "Obras Sociales del Santo Hermano Pedro",
+    "direccion": "6a. Calle Oriente No. 20, Antigua Guatemala",
+    "telefono": "79312100",
+    "email": "asociacion@obrashermanopedro.org",
+    "logo": "entidades/hermano_pedro.png",
+    "categorias": "fisica",
+    "horario": "lunes a viernes 8 a 16",
+    "servicios": "salud, educación, rehabilitación a drogas",
+    "atendidas": "parálisis cerebral, etc",
+    "area": "Sacatepequez"
+  },
+  {
+    "nombre": "Range of Motion Project NFP",
+    "direccion": "1ra Calle, 25-62, Zona 15, Colonia Vista Hermosa 2. Ciudad de Guatemala",
+    "telefono": "30499471",
+    "email": "jose@rompglobal.org",
+    "logo": "entidades/romp.png",
+    "categorias": "fisica",
+    "horario": "Lunes - Viernes/ 8:30 - 5:00",
+    "servicios": "Fisioterapia, Atención Protesica, Terapia Ocupacional, Rehabilitación comunitaria para personas amputadas.",
+    "atendidas": "Apuntación de miembro inferior de todos niveles, amputación de miembro superior de todos niveles,",
+    "area": "Alta Verapaz, Baja Verapaz, Chimaltenago, Chiquimula, Guatemala, El Progreso, Escuintla, Huehuetenango, Izabal, Jalapa, Jutiapa, Petén, Quetzaltenango, Quiché, Retalhuleu, Sacatepequez, San Marcos, Santa Rosa, Sololá, Suchitepequez, Totonicapán, Zacapa"
+  },
+  {
+    "nombre": "Visualiza",
+    "direccion": "4 avenida A 11-54 Zona 9",
+    "telefono": "24140900",
+    "email": "juan.yee@visualiza.org.gt",
+    "logo": "entidades/visualiza.png",
+    "categorias": "visual",
+    "horario": "No especificado",
+    "servicios": "No especificado",
+    "atendidas": "No especificado",
+    "area": "No especificada"
+  },
+  {
+    "nombre": "Centro de Aprendizaje y Rehabilitación Integral ARI",
+    "direccion": "Antigua Guatemala",
+    "telefono": "37428917",
+    "email": "cari.direccion@gmail.com",
+    "logo": "entidades/ari.jpg",
+    "categorias": "fisica,cognitiva,visual,auditiva",
+    "horario": "8am a 6pm",
+    "servicios": "Tutorías, Terapias, Estimulación Oportuna, Acompañamiento Escolar, Capacitación Docente, Evaluación Diagnóstica y Asesoría",
+    "atendidas": "Discapacidad Fisica, Cognitiva/Intelectual, Visual, Auditiva, Sensorial o del Neurodesarrollo y Problemas de Aprendizaje",
+    "area": "Chimaltenago, Guatemala, Escuintla, Sacatepequez"
+  },
+  {
+    "nombre": "Instituto Neurológico de Guatemala",
+    "direccion": "9a. avenida 5-51 zona 11 Col. Roosevelt",
+    "telefono": "24711613",
+    "email": "gestionlaboral@institutoneurologicodeguatemala.org",
+    "logo": "entidades/instituto_neurológico.jpg",
+    "categorias": "cognitiva",
+    "horario": "No especificado",
+    "servicios": "No especificado",
+    "atendidas": "No especificado",
+    "area": "No especificada"
+  }
   ]
 
 
