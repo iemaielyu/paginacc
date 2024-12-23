@@ -2,16 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guía de Deficiencias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="guia.css">
 </head>
 <body>
-
     <!-- Floating Burger Menu -->
     <div class="off-screen-menu">
         <ul>
@@ -42,12 +38,22 @@
     </header>
 
     <div class="container" id="cards-container">
-        <!-- Las tarjetas se generarán aquí mediante JavaScript -->
+        <!-- Deficiency cards will be dynamically added here via JavaScript -->
     </div>
 
+    <!-- Modal for displaying condition details -->
+    <div id="conditionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modal-slideshow-container">
+                <!-- Dynamic content will be injected here -->
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Include the JavaScript files -->
     <script src="guia.js"></script>
     <script src="script.js"></script>
-
 </body>
 </html>
-
