@@ -1,27 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Cargar los datos de deficiencias.json y condiciones.json
+    // Load deficiencies and conditions data
     Promise.all([
         fetch("deficiencias.json").then(response => response.json()),
         fetch("condiciones.json").then(response => response.json())
     ]).then(([deficiencias, condiciones]) => {
         const container = document.getElementById("cards-container");
 
+        // Generate deficiency cards
         deficiencias.forEach(deficiencia => {
-            // Crear la tarjeta
+            // Create the card
             const card = document.createElement("div");
             card.classList.add("card");
 
-            // Imagen de la tarjeta
+            // Card image
             const img = document.createElement("img");
             img.src = deficiencia.icon;
             img.alt = deficiencia.nombre;
             card.appendChild(img);
 
-            // Contenido de la tarjeta
+            // Card content
             const content = document.createElement("div");
             content.classList.add("card-content");
 
-            // Nombre y descripción
+            // Title and description
             const title = document.createElement("h3");
             title.textContent = deficiencia.nombre;
             content.appendChild(title);
@@ -30,114 +31,89 @@ document.addEventListener("DOMContentLoaded", () => {
             description.textContent = deficiencia.descripcion;
             content.appendChild(description);
 
-            // Botón Ver condiciones
+            // "Ver Condiciones" button
             const button = document.createElement("button");
             button.textContent = "Ver condiciones";
+            button.addEventListener("click", () => openModal(deficiencia.tag, condiciones));
             content.appendChild(button);
 
-            // Sección para el slideshow
-            const slideshowContainer = document.createElement("div");
-            slideshowContainer.classList.add("slideshow-container");
-            slideshowContainer.style.display = "none"; // Oculto al inicio
-
-            let currentSlide = 0;
-
-            // Obtener y mostrar condiciones relacionadas con el tag
-            const relatedConditions = condiciones.filter(condicion => condicion.categoria === deficiencia.tag);
-
-            // Crear slides y puntos de navegación
-            relatedConditions.forEach((condicion, index) => {
-                const slide = document.createElement("div");
-                slide.classList.add("slide");
-                slide.style.display = index === 0 ? "block" : "none"; // Mostrar solo la primera
-
-                const conditionImage = document.createElement("img");
-                conditionImage.src = condicion.imagen;
-                conditionImage.alt = condicion.nombre;
-                slide.appendChild(conditionImage);
-
-                const conditionName = document.createElement("h4");
-                conditionName.textContent = condicion.nombre;
-                slide.appendChild(conditionName);
-
-                const conditionSymptoms = document.createElement("p");
-                conditionSymptoms.textContent = `Síntomas: ${condicion.sintomas}`;
-                slide.appendChild(conditionSymptoms);
-
-                const conditionCauses = document.createElement("p");
-                conditionCauses.textContent = `Causas: ${condicion.causas}`;
-                slide.appendChild(conditionCauses);
-
-                const conditionPreclinical = document.createElement("p");
-                conditionPreclinical.textContent = `Preclínico: ${condicion.preclinico}`;
-                slide.appendChild(conditionPreclinical);
-
-                slideshowContainer.appendChild(slide);
-            });
-
-            // Crear controles de navegación
-            const prevButton = document.createElement("button");
-            prevButton.classList.add("prev");
-            prevButton.textContent = "❮";
-            prevButton.onclick = () => changeSlide(-1);
-            slideshowContainer.appendChild(prevButton);
-
-            const nextButton = document.createElement("button");
-            nextButton.classList.add("next");
-            nextButton.textContent = "❯";
-            nextButton.onclick = () => changeSlide(1);
-            slideshowContainer.appendChild(nextButton);
-
-            // Puntos de navegación
-            const dotsContainer = document.createElement("div");
-            dotsContainer.classList.add("dots-container");
-
-            relatedConditions.forEach((_, index) => {
-                const dot = document.createElement("span");
-                dot.classList.add("dot");
-                dot.onclick = () => setCurrentSlide(index);
-                dotsContainer.appendChild(dot);
-            });
-            slideshowContainer.appendChild(dotsContainer);
-
-            // Función para cambiar de slide
-            function changeSlide(n) {
-                currentSlide = (currentSlide + n + relatedConditions.length) % relatedConditions.length;
-                showSlide();
-            }
-
-            function setCurrentSlide(n) {
-                currentSlide = n;
-                showSlide();
-            }
-
-            function showSlide() {
-                const slides = slideshowContainer.querySelectorAll(".slide");
-                const dots = dotsContainer.querySelectorAll(".dot");
-
-                slides.forEach((slide, index) => {
-                    slide.style.display = index === currentSlide ? "block" : "none";
-                });
-
-                dots.forEach((dot, index) => {
-                    dot.classList.toggle("active", index === currentSlide);
-                });
-            }
-
-            // Toggle del slideshow y texto del botón
-            button.addEventListener("click", () => {
-                const isHidden = slideshowContainer.style.display === "none";
-
-                // Cambia el estado del slideshow
-                slideshowContainer.style.display = isHidden ? "block" : "none";
-
-                // Actualiza el texto del botón
-                button.textContent = isHidden ? "Ocultar condiciones" : "Ver condiciones";
-            });
-
-            content.appendChild(slideshowContainer);
             card.appendChild(content);
             container.appendChild(card);
         });
-    }).catch(error => console.error("Error al cargar los archivos JSON:", error));
+    }).catch(error => console.error("Error loading data:", error));
+
+    // Modal logic
+    const modal = document.getElementById("conditionModal");
+    const modalContent = document.getElementById("modal-slideshow-container");
+    const closeButton = document.querySelector(".close-button");
+
+    // Function to open modal
+    function openModal(tag, conditions) {
+        // Filter conditions for the selected tag
+        const relatedConditions = conditions.filter(condition => condition.categoria === tag);
+
+        // Populate modal content
+        modalContent.innerHTML = ""; // Clear previous content
+
+        // Add prev and next buttons
+        const prevButton = document.createElement("button");
+        prevButton.classList.add("prev");
+        prevButton.textContent = "❮";
+        modalContent.appendChild(prevButton);
+
+        relatedConditions.forEach((condition, index) => {
+            const slide = document.createElement("div");
+            slide.classList.add("slide");
+            slide.style.display = index === 0 ? "block" : "none"; // Show only the first slide initially
+
+            slide.innerHTML = `
+                <img src="${condition.imagen}" alt="${condition.nombre}">
+                <h4>${condition.nombre}</h4>
+                <p>Síntomas: ${condition.sintomas}</p>
+                <p>Causas: ${condition.causas}</p>
+                <p>Preclínico: ${condition.preclinico}</p>
+            `;
+            modalContent.appendChild(slide);
+        });
+
+        const nextButton = document.createElement("button");
+        nextButton.classList.add("next");
+        nextButton.textContent = "❯";
+        modalContent.appendChild(nextButton);
+
+        // Show modal
+        modal.style.display = "block";
+    }
+
+    // Close modal
+    closeButton.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside of it
+    window.addEventListener("click", event => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // Handle slide navigation
+    modalContent.addEventListener("click", event => {
+        if (event.target.classList.contains("prev")) {
+            navigateSlides(-1);
+        } else if (event.target.classList.contains("next")) {
+            navigateSlides(1);
+        }
+    });
+
+    // Slide navigation logic
+    function navigateSlides(direction) {
+        const slides = modalContent.querySelectorAll(".slide");
+        let currentIndex = Array.from(slides).findIndex(slide =>
+            slide.style.display === "block"
+        );
+        slides[currentIndex].style.display = "none";
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        slides[currentIndex].style.display = "block";
+    }
 });
