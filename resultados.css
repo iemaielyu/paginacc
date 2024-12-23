@@ -417,7 +417,7 @@ p{
     }
     .ham-menu{
         height: 1.5rem;
-        width: 3rem;
+        width: 2.5rem;
     }
     .ham-menu span{
         height: 0.2rem;
@@ -433,6 +433,29 @@ p{
     .off-screen-menu.active{
         left: 1.2rem;
         top: 0.2rem;
+    }
+
+    h1{
+        font-size: 2rem;
+        width: 80%;
+        margin: 5% auto;
+        text-align: center;
+    }
+
+    #deficiencias-container {
+        display: grid;
+        gap: 1%; /* Espaciado entre filas y columnas */
+        padding: 1%;
+        width: 95%;
+        justify-content: center; /* Centra los elementos en el eje horizontal */
+    }
+
+    #deficiencias-container:has(.grid-item:nth-child(1):nth-last-child(1)) {
+        grid-template-columns: 1fr; /* Una sola columna si solo hay un elemento */
+    }
+
+    #deficiencias-container:not(:has(.grid-item:nth-child(1):nth-last-child(1))) {
+        grid-template-columns: repeat(1, 1fr); /* Dos columnas si hay más de un elemento */
     }
     
   }
