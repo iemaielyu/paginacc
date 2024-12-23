@@ -392,7 +392,6 @@ body{
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%); /* Center horizontally and vertically */
-    background-color: #1a2165; /* Ensure it has the same background color */
     padding: 20px; /* Add padding for space around content */
     border-radius: 15px; /* Rounded corners */
     opacity: 0; /* Initially invisible */

@@ -149,11 +149,6 @@ h1{
 
 }
 
-
-
-
-
-
 .card img {
     padding-top: 5%;
     width: 80%;         /* Ajusta al porcentaje que prefieras */
@@ -163,36 +158,36 @@ h1{
     transform: scale(1);
 }
 
-
-
 .card h3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-top: 10px;
+    margin-bottom: 10%;
     color: #1a2165;
     font-weight: 700;
     text-align: center;
 }
 
 .card p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.5;
     color: #555555;
     text-align: center;
+    margin-bottom: 10%;
 }
 
 .card button {
-    
-    align-self: center; /* Asegura que el botón esté centrado */
-
     margin-top: auto; /* Empuja el botón hacia abajo */
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 600;
     color: white;
     background-color: #007bff;
     border: none;
     border-radius: 25px;
     transition: background-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card button:hover {

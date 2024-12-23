@@ -163,7 +163,7 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 250px; /* Ancho máximo */
     height: 400px; /* Altura fija */
-    overflow: hidden; /* Evita desbordes */
+    overflow: auto; /* Evita desbordes */
     padding: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -186,14 +186,21 @@ h1 {
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
+    margin-bottom: 1.2rem;
 }
 
 /* Prevent email overflow */
 .grid-item p {
     margin: 5px 0;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    line-height: 1.3;
     word-wrap: break-word;   /* Ensures long words (like emails) break within boundaries */
     overflow-wrap: break-word;
+}
+
+.grid-item h3{
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 /* Email link styling */
@@ -259,6 +266,10 @@ h1 {
 
     .filter-container{
         font-size: 0.8rem;
+    }
+
+    .grid-container{
+        margin-left: 12%;
     }
 
     .button-return-home{

@@ -115,6 +115,8 @@ h1 {
     justify-content: center; /* Centra horizontalmente las columnas dentro del contenedor */
     gap: 2%; /* Espacio entre columnas */
     padding: 1%; /* Espaciado interno opcional */
+    place-items: center;
+
 }
 
 .deficiencia-item {
@@ -141,6 +143,20 @@ p{
     line-height: 1.1rem;
 }
 
+.button-centers{
+    border: none;
+    background-color: #1a2165;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.7s;
+    margin-bottom: 1%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .button-print{
     border: none;
     background-color: #1a2165;
@@ -149,6 +165,12 @@ p{
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.7s;
+    margin-bottom: 1.5%;
+    font-size: 0.8rem;
+}
+
+.button-centers:hover{
+    background-color: #007bff;
 }
 
 .button-print:hover{
@@ -156,9 +178,9 @@ p{
 }
 
 #showCentersButton{
-    margin-left: 42%;
-    margin-bottom: 1%;
+    margin-bottom: 5%;
     font-size: 1rem;
+
 }
 
 #printButton{
@@ -169,6 +191,12 @@ p{
     margin-left: 0.5%;
 }
 
+.deficiencias-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
 .card {
     display: flex;
@@ -199,31 +227,35 @@ p{
 }
 
 .card h3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-top: 10px;
-    color: #1a2165;
+    color: black;
     font-weight: 700;
     text-align: center;
+    margin-bottom: 10%;
 }
 
 .card p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #555555;
+    font-size: 0.8rem;
+    line-height: 1;
+    color: black;
     text-align: center;
+    margin-bottom: 10%;
 }
 
 .card button {
-    align-self: center;
     margin-top: auto;
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 600;
     color: white;
     background-color: #007bff;
     border: none;
     border-radius: 25px;
     transition: background-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card button:hover {
@@ -240,8 +272,6 @@ p{
     align-items: center;
     justify-content: space-between;
 }
-
-
 
 .slideshow-container {
     position: relative;
@@ -303,8 +333,76 @@ p{
     background-color: #007bff;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 1%;/* Espaciado interno */
+    margin-top: -5%;
+}
 
+/* Entity card */
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #f9f9f9;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 250px; /* Ancho máximo */
+    height: 400px; /* Altura fija */
+    overflow: auto; /* Evita desbordes */
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+/* Efecto de hover */
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+    margin-left: 25%;
+}
+
+.grid-item h4 {
+    margin: 10px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+/* Prevent email overflow */
+.grid-item p {
+    margin: 5px 0;
+    font-size: 0.8rem;
+    text-align: left;
+    line-height: 1.3;
+    word-wrap: break-word;   /* Ensures long words (like emails) break within boundaries */
+    overflow-wrap: break-word;
+}
+
+.grid-item h3{
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+/* Email link styling */
+.grid-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.grid-item a:hover {
+    text-decoration: underline;
+}
 
 @media (max-width: 480px) {
 
