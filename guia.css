@@ -194,10 +194,6 @@ h1{
     background-color: #0056b3;
 }
 
-
-
-
-
 .card::-webkit-scrollbar {
     width: 8px;
 }
@@ -232,8 +228,6 @@ h1{
     background-color: #0056b3;
 }
 
-
-
 .slideshow-container {
     position: relative;
     width: 100%;
@@ -244,7 +238,6 @@ h1{
     transition: max-height 0.3s ease-in-out;
 
 }
-
 
 .slideshow-container.show {
     max-height: 500px; /* Ajusta según el contenido */
@@ -412,9 +405,6 @@ h1{
     text-decoration: none;
     cursor: pointer;
 }
-
-
-
 
 @media (max-width: 480px) {
 
