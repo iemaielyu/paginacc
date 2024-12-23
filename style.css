@@ -55,6 +55,7 @@ a{
 
 .off-screen-menu.active{
     left: 10rem;
+    z-index: 2;
 }
 
 .off-screen-menu ul li:hover {
@@ -70,6 +71,7 @@ a{
     width: 50px;
     margin-right: auto;
     position: relative;
+    z-index: 2;
 }
 
 .ham-menu span{
@@ -126,11 +128,6 @@ a{
 
 }
 
-.logo{
-    width: 50%;
-    margin-top: 10%;
-}
-
 .contenedor-botones{
     display: flex;
     gap: 10px;
@@ -158,10 +155,12 @@ a{
 
 .principal{
     position: absolute;
+    top: 85%;
     right: 50px;
     bottom: 1%;
     width: 12%;
     height: auto;
+    z-index: 2;
 }
 
 .button-return-home {
@@ -342,8 +341,20 @@ a{
 /* Welcome Screen Styles */
 .header-welcome{
     color: white;
+    margin-top: 2rem;
     margin-bottom: 2rem;
-    font-size: 3rem;
+    font-size: 1.8rem;
+}
+
+.logo{
+    width: 25%;
+    margin-top: 10%;
+    margin-bottom: 1%;
+}
+
+.texto-tamizaje{
+    margin-left: 35%;
+    margin-right: 35%;
 }
 
 .welcome-screen {
@@ -353,19 +364,17 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    height: 70%; /* Full height for centering */
+    text-align: justify;
+    height: 65%; /* Full height for centering */
     background-color: #1a2165;
     transition: opacity 0.5s ease; /* Transition for fade-out effect */
     opacity: 1; /* Initial opacity */
     position: absolute; /* Positioned to overlay the entire screen */
-    top: 22%;
-    left: 2.5%;
-    right: 2.5%;
     color: rgb(62, 227,148); /* Font color for the welcome message */
     font-size: 1rem;
     line-height: 1.1rem;
-} 
+    z-index: 1;
+}
 
 .welcome-screen.fade-out {
     opacity: 0; /* Fades out when class is added */
@@ -476,7 +485,7 @@ body{
 
 /* Start Button */
 .start-button {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 15px 20px;
     font-family: 'montserrat';
     text-align: center;
@@ -486,7 +495,7 @@ body{
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.7s;
-    margin: 3%;
+    margin: 35px;
 }
 
 .start-button:hover {
@@ -605,14 +614,20 @@ body{
 /* Media queries para responsive design */
 @media (max-width: 480px) {
 
+    .logo{
+        width: 50%;
+    }
+
     .header-welcome{
-        font-size: 1.5rem;
+        font-size: 1rem;
+    }
+    .texto-tamizaje{
+        margin-left: 12%;
+        margin-right: 12%;
     }
 
     .welcome-screen{
         font-size: 0.8rem;
-        left: 2%;
-        right: 2%;
         top: 9%;
     }
     .start-button{
@@ -652,6 +667,7 @@ body{
     .welcome-screen{
         top: 15%; 
     }
+
     .question-container{
         top: 50%;
     }
@@ -667,6 +683,10 @@ body{
 @media (min-width: 768px) and (max-width: 1024px) {
     .welcome-screen{
         top: 15%;
+    }
+    .texto-tamizaje{
+        margin-left: 20%;
+        margin-right: 20%;
     }
     .question-container{
         top: 48%;

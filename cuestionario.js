@@ -4,9 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const questionContainer = document.querySelector('.question-container');
     const questionScreens = document.querySelectorAll('.question-screen');
     const progress = document.querySelector('.progress');
+    const progressBarContainer = document.querySelector('.progress-container'); // Contenedor del progress bar
     const keywords = ['cognitiva', 'cognitiva', 'cognitiva', 'visual', 'auditiva', 'fisica'];
     let currentQuestionIndex = 0;
     let queryConditions = [];
+
+    // Oculta el contenedor de la barra de progreso inicialmente
+    progressBarContainer.style.display = 'none';
 
     // Start questionnaire
     startButton.addEventListener('click', () => {
@@ -15,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
             welcomeScreen.style.display = 'none';
             questionContainer.style.display = 'flex';
             questionContainer.style.opacity = '1';
+            // Mostrar la barra de progreso al iniciar el cuestionario
+            progressBarContainer.style.display = 'block';
         }, 500);
     });
 
