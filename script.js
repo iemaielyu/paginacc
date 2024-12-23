@@ -47,6 +47,16 @@ document.addEventListener('click', (event) => {
     }
 });
 
+// Cerrar el menú al hacer scroll en la pantalla en modo responsive
+document.addEventListener('scroll', () => {
+    // Solo cerrar el menú si el ancho de la ventana es menor o igual al límite deseado (e.g., 768px)
+    if (window.innerWidth <= 1025) { // Cambia 768 por el valor que desees
+        hamMenu.classList.remove('active');
+        offScreenMenu.classList.remove('active');
+    }
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.querySelector('.start-button');
     const welcomeScreen = document.querySelector('.welcome-screen');
