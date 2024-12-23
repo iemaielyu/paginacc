@@ -182,13 +182,16 @@ function loadEntities(entidades, selectedCategories, gridContainer) {
         entityDiv.classList.add('grid-item');
 
         entityDiv.innerHTML = `
-            <img src="${entity.logo}" alt="Logo de ${entity.nombre}">
-            <h4>${entity.nombre}</h4>
-            <p>Dirección: ${entity.direccion}</p>
-            <p>Teléfono: ${entity.telefono}</p>
-            <p>Email: <a href="mailto:${entity.email}">${entity.email}</a></p>
+        <img src="${entity.logo}" alt="Logo de ${entity.nombre}">
+        <h4>${entity.nombre}</h4>
+        <h3>Área de cobertura:</h3> <p>${entity.area}</p>
+        <h3>Dirección:</h3> <p>${entity.direccion}</p>
+        <h3>Teléfono:</h3> <p> ${entity.telefono}</p>
+        <h3>Email:</h3> <p> <a href="mailto:${entity.email}">${entity.email}</a></p>
+        <h3>Horario:</h3> <p> ${entity.horario}</p>
+        <h3>Servicios:</h3> <p> ${entity.servicios}</p>
+        <h3>Condiciones atendidas:</h3> <p> ${entity.atendidas}</p>
         `;
-
         gridContainer.appendChild(entityDiv);
     });
 }
