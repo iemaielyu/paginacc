@@ -137,7 +137,7 @@ a{
 .boton {
     flex: 1; /* Todos los botones ocupan el mismo ancho */
     padding: 15px 20px; /* Espaciado dentro del botón */
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-family: 'montserrat';
     text-align: center;
     background-color: rgb(18, 20, 74);
@@ -343,7 +343,7 @@ a{
     color: white;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .logo{
@@ -463,7 +463,7 @@ body{
     padding: 1rem;
     border: none;
     border-radius: 5rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.7s ease;

@@ -404,7 +404,6 @@ p{
     text-decoration: underline;
 }
 
-
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
@@ -463,7 +462,6 @@ p{
     color: #444;
 }
 
-
 /* Close Button */
 .close-button {
     position: absolute;
@@ -483,7 +481,6 @@ p{
 }
 
 
-
 @media (max-width: 480px) {
 
     li{
@@ -497,7 +494,8 @@ p{
     }
     .ham-menu{
         height: 1.5rem;
-        width: 2.5rem;
+        width: 3rem;
+        z-index: 2;
     }
     .ham-menu span{
         height: 0.2rem;
@@ -508,7 +506,10 @@ p{
     .off-screen-menu{
         font-size: 0.8rem;
         margin-left: 0.1rem;
-
+        background-color: rgb(39, 69, 249);
+        height: 7rem;
+        z-index: 2;
+        border-radius: 15%;
     }
     .off-screen-menu.active{
         left: 1.2rem;
@@ -516,9 +517,9 @@ p{
     }
 
     h1{
-        font-size: 2rem;
-        width: 80%;
-        margin: 5% auto;
+        font-size: 1.5rem;
+        width: 50%;
+        margin-left: 25%;
         text-align: center;
     }
 

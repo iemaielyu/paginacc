@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
             slide.innerHTML = `
                 <img src="${condition.imagen}" alt="${condition.nombre}">
                 <h4>${condition.nombre}</h4>
-                <p>Síntomas: ${condition.sintomas}</p>
-                <p>Causas: ${condition.causas}</p>
-                <p>Preclínico: ${condition.preclinico}</p>
+                <h3 class="h3-slide">Síntomas:</h3>  <p>${condition.sintomas}</p>
+                <h3 class="h3-slide">Causas:</h3> <p>${condition.causas}</p>
+                <h3 class="h3-slide">Preclínico:</h3> <p>${condition.preclinico}</p>
             `;
             modalContent.appendChild(slide);
         });
