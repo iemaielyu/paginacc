@@ -1,28 +1,15 @@
  [
   {
     "nombre": "ADISA",
-    "direccion": "Santiago Atitlán, Sololá",
+    "direccion": "Cantón Tzanchicham, Santiago Atitlán Sololá",
     "telefono": "77217919",
-    "email": "adisasalud@gmail.com",
+    "email": "adisasalud@gmail.com, ponsetiadisa@gmail.com",
     "logo": "entidades/adisa.png",
     "categorias": ["fisica"],
-    "sub": ["f1","f2","f4"],
+    "sub": ["f2","f5"],
     "horario": "8 am a 4:00 pm de lunes a viernes",
     "servicios": "Educacion, Emprendimiento economico, empoderamiento social, Clinica dental, fisioterapia, terapia ocupacional, estimulacion oportuna, psicologia",
     "atendidas": "Paralisis cerebral, pie equino varo, retraso psico motor, lesiones por accidentes en moto.",
-    "area": "Sololá"
-  },
-  {
-    "nombre": "ADISA",
-    "direccion": "Cantón Tzanchicham, Santiago Atitlán Sololá",
-    "telefono": "77217919",
-    "email": "ponsetiadisa@gmail.com",
-    "logo": "entidades/adisa.png",
-    "categorias": ["fisica"],
-    "sub": ["f5"],
-    "horario": "8:00 a.m. a 4:00 p.m.",
-    "servicios": "Terapia física, estimulación oportuna, salud mental, educación inclusiva, asesoría en temas de discapacidad",
-    "atendidas": "Pie equino varo, entre otras",
     "area": "Chiquimula, Huehuetenango, Petén, Quetzaltenango, San Marcos, Sololá"
   },
   {
@@ -32,7 +19,7 @@
     "email": "cubulcoaidepce@hotmail.com",
     "logo": "entidades/aidepce.jpg",
     "categorias": ["fisica"],
-    "sub": ["f1","f2","f3","f4","f5"],
+    "sub": ["f1","f2","f3","f4","f5","f6"],
     "horario": "Lunes a Viernes. De 08 a 17 horas",
     "servicios": "Educación, rehabilitación e inclusión.",
     "atendidas": "Todos",
@@ -59,10 +46,10 @@
     "logo": "entidades/ascated.jpg",
     "categorias": ["visual"],
     "sub": ["v1","v2","v3","v4","v5"],
-    "horario": "No especificado",
-    "servicios": "No especificado",
+    "horario": "De lunes a viernes de 8:00 am a 5:00 pm",
+    "servicios": "Capacitación y preparación para el trabajo y desarrollo de emprendimientos.",
     "atendidas": "No especificado",
-    "area": "No especificada"
+    "area": "Chiquimula, Guatemala, El Progreso, Jalapa"
   },
   {
     "nombre": "Asociación de Padres y Amigos de Personas con Discapacidad que podrá abreviarse ASOPADIS",
@@ -71,7 +58,7 @@
     "email": "rpasopadis@gmail.com",
     "logo": "entidades/asopadis.png",
     "categorias": ["fisica"],
-    "sub": ["f1","f2"],
+    "sub": ["f1","f2","f3","f4"],
     "horario": "De lunes a viernes de 08:00 a 12:30 hrs. y de 14:00 a 17:00 hrs",
     "servicios": "Fisioterapia, Terapia de Lenguaje, Psicología, Acompañamiento médico y dotación de auxiliares, Desarrollo Ocupacional, Hidroterapia",
     "atendidas": "Parálisis cerebral • Lesiones medulares • Hemiplejías • Retraso psicomotor • Acortamiento • Amputaciones • Espina Bífida • Lesión de plexo braquial • Parálisis facial • Fractura",
@@ -85,10 +72,10 @@
     "logo": "entidades/asedes.png",
     "categorias": ["auditiva"],
     "sub": ["a1","a2","a3"],
-    "horario": "No especificado",
-    "servicios": "No especificado",
-    "atendidas": "No especificado",
-    "area": "No especificada"
+    "horario": "Lunes a Viernes 9:00 a 15:00",
+    "servicios": "Cursos de Lengua de señas, Centro Terapéutico, Conferencias de Sensibilización",
+    "atendidas": "Pérdida auditiva neurosensorial, Pérdida auditiva conductiva, Pérdida auditiva mixta",
+    "area": "Guatemala"
   },
   {
     "nombre": "Asociación Grupo Ermita Alzheimer de Guatemala",
@@ -97,11 +84,11 @@
     "email": "info@ermitaalzheimer.org.gt",
     "logo": "entidades/grupo_ermita.png",
     "categorias": ["cognitiva"],
-    "sub": ["c1","c2","c3","c4","c5","c6"],
-    "horario": "No especificado",
-    "servicios": "No especificado",
-    "atendidas": "No especificado",
-    "area": "No especificada"
+    "sub": ["c3"],
+    "horario": "Lunes a Viernes de 8:00 a 17:00 horas",
+    "servicios": "Consulta Médica, Centro de Día, Grupo de apoyo, Diplomado Cuidado del Adulto Mayor con énfasis en Alzheimer, Ermita en Casa, terapia física",
+    "atendidas": "Alzheimer y otras demencias",
+    "area": "Guatemala"
   },
   {
     "nombre": "Asociación Guatemalteca de Apoyo al Limitado Fisico",
@@ -110,7 +97,7 @@
     "email": "agalfi@hotmail.com",
     "logo": "entidades/agalfi.png",
     "categorias": ["fisica"],
-    "sub": ["f1","f2"],
+    "sub": ["f1"],
     "horario": "domingos de 9:00 a 12:00 horas",
     "servicios": "Básquetbol sobre silla de ruedas,",
     "atendidas": "Principalmente paraplejia",
@@ -123,7 +110,7 @@
     "email": "asogemguatemala@gmail.com",
     "logo": "entidades/asogem.png",
     "categorias": ["fisica"],
-    "sub": ["f2"],
+    "sub": ["f6"],
     "horario": "Lunes a Viernes 8:00-16:00 hrs, Sábados 9:00-13:00hrs",
     "servicios": "Terapias Psicológicas, Terapias Físicas",
     "atendidas": "Fatiga Problemas de movilidad: afecta la función de los nervios que controlan los músculos Espasticidad muscular Problemas de equilibrio y coordinación: Debilidad muscular Problemas de marcha",
@@ -161,8 +148,8 @@
     "telefono": "77218139",
     "email": "somoshijosdellago@yahoo.com",
     "logo": "entidades/sohilago.png",
-    "categorias": ["fisica","cognitiva"],
-    "sub": ["f1","f2","f5"],
+    "categorias": ["fisica"],
+    "sub": ["a1","a2","a3"],
     "horario": "Lunes a viernes, 08:00 am - 12:00 pm y 02:00 pm - 05:00 pm",
     "servicios": "Fisioterapia, Terapia de Lenguaje, Psicología, Musicoterapia",
     "atendidas": "Lesiones espinales, pie equinovaro, parálisis cerebral, lesión medular, distrofia muscular progresiva y demás deficiencias físicas",
@@ -189,10 +176,10 @@
     "logo": "entidades/asorgua.jpeg",
     "categorias": ["auditiva"],
     "sub": ["a1","a2","a3"],
-    "horario": "No especificado",
-    "servicios": "No especificado",
+    "horario": "Martes a viernes 09:00-17:00 horas. Sábado 08:30-16:00 horas",
+    "servicios": "Metodología educativa p/p sordas. Cursos señas (150.00 mens). Interpretación en LENSEGUA (solicita x sordo gratis. X gob institución Q.150.00 c/hora)",
     "atendidas": "No especificado",
-    "area": "No especificada"
+    "area": "Guatemala"
   },
   {
     "nombre": "Beeline Wheelchairs",
@@ -201,7 +188,7 @@
     "email": "info@beelinewheelchairs.org",
     "logo": "entidades/beeline.jpg",
     "categorias": ["fisica","cognitiva"],
-    "sub": ["f3","c5","c6"],
+    "sub": ["f1","f3","c5","c6"],
     "horario": "Lunes a Viernes de 7am a 4 pm",
     "servicios": "Donación de Sillas de ruedas Pediátricas y Ortopédicas",
     "atendidas": "Hidrocefalia,Microcefalia, Espina Bífida y cualquier impedimento de movilización en pacientes pediátricos",
@@ -214,11 +201,11 @@
     "email": "isantos@prociegosysordos.org.gt",
     "logo": "entidades/pro-ciegos.png",
     "categorias": ["visual"],
-    "sub": ["v1","v2","v3","v4","v5","v6"],
-    "horario": "No especificado",
-    "servicios": "No especificado",
-    "atendidas": "No especificado",
-    "area": "No especificada"
+    "sub": ["v1","v2","v3","v6"],
+    "horario": "5 días a la semana, 07:00 a 15:00 hrs.",
+    "servicios": ": Salud, Educación y Rehabilitación",
+    "atendidas": "Rehabilitación por diagnósticos: Glaucoma, Desprendimiento de Retina, Traumatismo o lesión grave. Retinopatía diabética. Oclusión vascular. Lavado de oído, audiometría y logoaudiometría, timpanometría, potenciales evocados auditivos, procedimiento quirúrgicos.",
+    "area": "Alta Verapaz, Chimaltenango, Guatemala, Huehuetenango, Quetzaltenango, Santa Rosa"
   },
   {
     "nombre": "Bitol",
@@ -228,36 +215,23 @@
     "logo": "entidades/bitol.jpeg",
     "categorias": ["fisica","cognitiva"],
     "sub": ["f1","f2","f3","f4","f5","f6","c1","c2","c3","c4","c5","c6"],
-    "horario": "5-Aug",
+    "horario": "8:00 AM a 5:00 pm",
     "servicios": "terapia fisica y lenguaje",
     "atendidas": "Terapia y referencia para cirujia especial",
     "area": "San Marcos"
   },
   {
-    "nombre": "Centro Educativo para Sordos",
+    "nombre": "Asociación Las Voces del Silencio LAVOSI ",
     "direccion": "Calle Real Residencial El Pedregal # 3 Jocotenango, Sacatepéquez",
     "telefono": "45986417",
     "email": "lavosi09@gmail.com",
     "logo": "entidades/voces_del_silencio.jpeg",
     "categorias": ["auditiva"],
-    "sub": ["a1","a2","a3"],
-    "horario": "No especificado",
-    "servicios": "No especificado",
-    "atendidas": "No especificado",
-    "area": "No especificada"
-  },
-  {
-    "nombre": "Centro Maya Servicio Integral",
-    "direccion": "3ra. Avenida 3-36 zona 2 San Juan La Laguna Sololá",
-    "telefono": "78236510",
-    "email": "direccioncentromayasi@gmail.com",
-    "logo": "entidades/centro_maya.png",
-    "categorias": ["fisica"],
-    "sub": ["f1","f2","f3","f4","f5","f6"],
-    "horario": "8:00 a 17:00 horas",
-    "servicios": "Promoción de derechos humanos e inclusión de las personas con discapacidad, atendemos todos los tipos de Discapacidad y de todas las edades",
-    "atendidas": "Todas las descritas y otras todos los tipos de Discapacidad.",
-    "area": "Sololá"
+    "sub": ["a2"],
+    "horario": ": Lunes a viernes 8:00 AM a 12:30 PM",
+    "servicios": "Educación primaria para personas con discapacidad auditiva",
+    "atendidas": ": Pérdida auditiva neurosensoria",
+    "area": "Sacatepéquez"
   },
   {
     "nombre": "Centro Maya Servicio Integral",
@@ -292,7 +266,7 @@
     "email": "yazmin@heartsinmotion.org",
     "logo": "entidades/corazones_en_movimiento.jpeg",
     "categorias": ["fisica"],
-    "sub": ["f1","f4"],
+    "sub": ["f1","f3","f4"],
     "horario": "Lunes a viernes de 8am a 4:30pm",
     "servicios": "Terapia Física y Ocupacional",
     "atendidas": "Fracturas, ACV, amputaciones, contusiones, traumas craneoencefalicos, lesiones medulares, lesiones neuronales, entre otros",
@@ -351,17 +325,17 @@
     "area": "Guatemala, Huehuetenango, Quetzaltenango"
   },
   {
-    "nombre": "Las voces del silencio LAVOSI",
+    "nombre": "Tebow Down Guatemala",
     "direccion": "10 calle 11-13 zona 3 de Mixco, Nueva Monteserrat",
     "telefono": "22128818",
     "email": "info@downguatemala.org",
-    "logo": "entidades/voces_del_silencio.jpeg",
+    "logo": "entidades/tebow.png",
     "categorias": ["cognitiva"],
-    "sub": ["c1"],
-    "horario": "No especificado",
-    "servicios": "No especificado",
-    "atendidas": "No especificado",
-    "area": "No especificada"
+    "sub": ["c1","c2","c4"],
+    "horario": "lunes a viernes de 7:30 a.m. a 4:00 p.m.",
+    "servicios": "Terapias físicas, ocupacionales, talleres de vida diaria, Estimulación oportuna y adaptación escolar",
+    "atendidas": ": Síndrome de Down, Autismo, Prader Willis, Discapacidad intelectual leve",
+    "area": "Guatemala"
   },
   {
     "nombre": "Obras Sociales del Santo Hermano Pedro",
@@ -396,11 +370,24 @@
     "email": "juan.yee@visualiza.org.gt",
     "logo": "entidades/visualiza.png",
     "categorias": ["visual"],
-    "sub": ["v1","v2","v3"],
-    "horario": "No especificado",
-    "servicios": "No especificado",
-    "atendidas": "No especificado",
-    "area": "No especificada"
+    "sub": ["v1","v2","v4","v5"],
+    "horario": "De lunes a viernes 7 am a 4 pm sábados de 8 am a 12 pm",
+    "servicios": "Oftalmología, Centro dietético, óptica, farmacia, laboratorio de sangre, servicio a domicilio",
+    "atendidas": " Catarata, Córnea, Degeneración macular, desprendimientos de córnea, trasplantes de córnea, Discapacidad visual por glaucoma, oftalmología pediátrica, oculoplástica, segmento anterior,Baja visión, prótesis oculares",
+    "area": "Alta Verapaz, Baja Verapaz, Chimaltenango, Guatemala, El Progreso, Escuintla, Huehuetenango, Petén, Quetzaltenango, Quiché, Sacatepéquez, San Marcos, Santa Rosa, Totonicapán"
+  },
+  {
+    "nombre": "Miraclefeet",
+    "direccion": "Antigua Guatemala",
+    "telefono": "-",
+    "email": "-",
+    "logo": "entidades/miraclefeet.jpg",
+    "categorias": ["fisica","cognitiva","visual","auditiva"],
+    "sub": ["f5"],
+    "horario": "Hospital Regional De. Jorge Vides de Huehuetenango, laboran solamente el día Martes. Contacto: Yohana Cano al Tel: 4958-9003.Hospital Regional de Occidente San Juan de Dios Quetzaltenango, laboran solamente el día jueves. Contacto: Margarita Huinac al Tel: 4650-0960. Hospital Nacional de San Marcos, laboran solamente el día lunes. Contacto: Lys Vásquez al Tel: 4728-0105. Hospital Nacional Juan de Dios Rodas Sololá, laboran solamente el día viernes. Contacto: Andrea Sojuel al Tel: 4653-2825 Hospital Nacional de Jutiapa, laboran solamente el día miércoles. Contacto: Yamileth Rosil al Tel: 4845-4470. Hospital Modular de Chiquimula, laboran solamente el día miércoles. Contacto: Erika Vásquez al Tel: 4653-5293 Poptun Asociación LUFECADIS, laboran solamente el día martes. Contacto: Yeltain Bulum al Tel: 4006-1239",
+    "servicios": "Método Ponseti ",
+    "atendidas": "Pie equinovaro",
+    "area": ": Huehuetenango, Quetzaltenango, San Marcos, Sololá, Jutiapa, Chiquimula, Poptun"
   },
   {
     "nombre": "Centro de Aprendizaje y Rehabilitación Integral ARI",
@@ -422,11 +409,11 @@
     "email": "gestionlaboral@institutoneurologicodeguatemala.org",
     "logo": "entidades/instituto_neurológico.jpg",
     "categorias": ["cognitiva"],
-    "sub":  ["c1","c2","c3","c4","c5","c6"],
-    "horario": "No especificado",
-    "servicios": "No especificado",
-    "atendidas": "No especificado",
-    "area": "No especificada"
+    "sub":  ["c1","c2","c4"],
+    "horario": "Lunes a viernes de 8:00 a 16:00 y sábado de 8:00 a 12:00",
+    "servicios": ": Educación especial y terapias de apoyo para niños, jóvenes y adultos.",
+    "atendidas": "Discapacidad Intelectual, TEA, Síndrome de Down y síndromes asociados a Discapacidad Intelectual leve a moderada",    
+    "area": "Retalhuleu, Guatemala"
   }
   ]
 
