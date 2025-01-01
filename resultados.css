@@ -40,7 +40,7 @@ a{
     margin-left: -5rem;
     transition: .3s ease;
     width: 10rem;
-    height: 10.5rem;
+    height: 5rem;
 }
 
 .off-screen-menu.active{
@@ -105,15 +105,13 @@ h1 {
     font-weight: 700;
     font-size: 3rem;
     width: 100%;
-    margin-top: -1%;
-    margin-bottom: 5%;
 }
 
 #deficiencias-container {
     display: grid;
     grid-template-columns: repeat(4, auto); /* Crea cuatro columnas de ancho automático */
     justify-content: center; /* Centra horizontalmente las columnas dentro del contenedor */
-    gap: 2%; /* Espacio entre columnas */
+    gap: 2rem   ; /* Espacio entre columnas */
     padding: 1%; /* Espaciado interno opcional */
     place-items: center;
 
@@ -237,8 +235,8 @@ p{
 
 .card p {
     font-size: 0.8rem;
-    line-height: 1;
-    color: black;
+    line-height: 1.1rem;
+    color: #555555;
     text-align: center;
     margin-bottom: 10%;
 }
@@ -338,7 +336,7 @@ p{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 1%;/* Espaciado interno */
-    margin-top: -5%;
+    margin-top: -1%;
 }
 
 /* Entity card */
