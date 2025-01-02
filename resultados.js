@@ -7,24 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
     ])
     .then(([deficiencias, condiciones, entidades]) => {
         const gridContainer = document.getElementById("grid-container");
-        const showCentersButton = document.getElementById("showCentersButton");
 
         // Mostrar las deficiencias seleccionadas
         const selectedCategories = JSON.parse(sessionStorage.getItem("selectedCategories")) || [];
         const filteredDeficiencias = deficiencias.filter(def => selectedCategories.includes(def.tag));
         displayDeficiencias(filteredDeficiencias, condiciones);
 
-        // Configurar el botón para mostrar centros de atención
-        showCentersButton.addEventListener("click", () => {
-            if (gridContainer.classList.contains("hidden")) {
-                gridContainer.classList.remove("hidden");
-                showCentersButton.textContent = "Ocultar centros de atención";
-                loadEntities(entidades, selectedCategories, gridContainer);
-            } else {
-                gridContainer.classList.add("hidden");
-                showCentersButton.textContent = "Ver posibles centros de atención";
-            }
-        });
+
     })
     .catch(error => {
         console.error("Error al cargar los datos:", error);
@@ -54,17 +43,19 @@ document.addEventListener("DOMContentLoaded", () => {
         relatedConditions.forEach((condition, index) => {
             const slide = document.createElement("div");
             slide.classList.add("slide");
-            slide.style.display = index === 0 ? "block" : "none"; // Show only the first slide initially
+            slide.style.display = index === 0 ? "block" : "none";
 
-            slide.innerHTML = `
-                <img src="${condition.imagen}" alt="${condition.nombre}">
-                <h4>${condition.nombre}</h4>
-                <h3 class="h3-slide">Síntomas:</h3>  <p>${condition.sintomas}</p>
-                <h3 class="h3-slide">Causas:</h3> <p>${condition.causas}</p>
-                <h3 class="h3-slide">Preclínico:</h3> <p>${condition.preclinico}</p>
-            `;
-            modalContent.appendChild(slide);
-        });
+        slide.innerHTML = `
+            <img src="${condition.imagen}" alt="${condition.nombre}">
+            <h4>${condition.nombre}</h4>
+            <h3 class="h3-slide">Síntomas:</h3>  <p>${condition.sintomas}</p>
+            <h3 class="h3-slide">Causas:</h3> <p>${condition.causas}</p>
+            <h3 class="h3-slide">Preclínico:</h3> <p>${condition.preclinico}</p>
+            <button class="button-centers" onclick="showCentersForCondition('${condition.sub}')">Ver centros que atienden esta condición</button>
+        `;
+
+        modalContent.appendChild(slide);
+    });
 
         const nextButton = document.createElement("button");
         nextButton.classList.add("next");
@@ -166,3 +157,92 @@ function displayDeficiencias(deficiencias, condiciones) {
         deficienciasContainer.appendChild(card);
     });
 }
+
+function showCentersForCondition(sub) {
+    const gridContainer = document.getElementById("grid-container");
+    fetch("entidades.json")
+        .then(response => response.json())
+        .then(entidades => {
+            gridContainer.innerHTML = ""; // Clear existing entities
+            const filteredEntities = entidades.filter(entity => entity.sub.includes(sub));
+
+            filteredEntities.forEach(entity => {
+                const entityDiv = document.createElement("div");
+                entityDiv.classList.add("grid-item");
+
+                entityDiv.innerHTML = `
+                    <img src="${entity.logo}" alt="Logo de ${entity.nombre}">
+                    <h4>${entity.nombre}</h4>
+                    <h3>Área de cobertura:</h3> <p>${entity.area}</p>
+                    <h3>Dirección:</h3> <p>${entity.direccion}</p>
+                    <h3>Teléfono:</h3> <p>${entity.telefono}</p>
+                    <h3>Email:</h3> <p><a href="mailto:${entity.email}">${entity.email}</a></p>
+                    <h3>Horario:</h3> <p>${entity.horario}</p>
+                    <h3>Servicios:</h3> <p>${entity.servicios}</p>
+                    <h3>Condiciones atendidas:</h3> <p>${entity.atendidas}</p>
+                `;
+
+                gridContainer.appendChild(entityDiv);
+            });
+
+            modal.style.display = "none"; // Close the modal
+        })
+        .catch(error => {
+            console.error("Error al cargar los datos de entidades:", error);
+            alert("Hubo un error al cargar los centros de atención.");
+        });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const printButton = document.getElementById("printButton");
+    const pdfButton = document.getElementById("pdfButton");
+
+    // Function to expand all cards temporarily
+    function expandCardsForPrint() {
+        const cards = document.querySelectorAll(".grid-item, .card");
+        cards.forEach(card => {
+            card.style.maxHeight = "none";
+            card.style.overflow = "visible";
+        });
+    }
+
+    // Function to reset cards to their original state
+    function resetCardStyles() {
+        const cards = document.querySelectorAll(".grid-item, .card");
+        cards.forEach(card => {
+            card.style.maxHeight = ""; // Revert to CSS-defined max-height
+            card.style.overflow = ""; // Revert to CSS-defined overflow
+        });
+    }
+
+    // Print functionality
+    printButton.addEventListener("click", () => {
+        expandCardsForPrint();
+        setTimeout(() => {
+            window.print();
+            resetCardStyles(); // Reset after printing
+        }, 500); // Delay to allow the browser to update layout
+    });
+
+    // Save as PDF functionality
+    pdfButton.addEventListener("click", () => {
+        const gridContainer = document.getElementById("grid-container");
+        expandCardsForPrint();
+
+        if (typeof jsPDF !== "undefined") {
+            const pdf = new jsPDF();
+            pdf.html(gridContainer, {
+                callback: function (doc) {
+                    doc.save("Resultados.pdf");
+                    resetCardStyles(); // Reset after generating the PDF
+                },
+                x: 10,
+                y: 10,
+                width: 190, // Adjust width for better fitting
+            });
+        } else {
+            alert("La funcionalidad para guardar como PDF no está habilitada. Por favor, usa 'Guardar como PDF' desde el diálogo de impresión.");
+            resetCardStyles(); // Reset styles if jsPDF is not available
+        }
+    });
+});

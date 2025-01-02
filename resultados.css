@@ -625,3 +625,29 @@ p{
     }
     
   }
+
+
+  @media print {
+    .grid-item {
+        max-height: none; /* Remove height restrictions */
+        overflow: visible; /* Ensure all content is visible */
+    }
+
+    .grid-container {
+        display: block; /* Prevent flex/grid truncation */
+    }
+
+    .card {
+        max-height: none;
+        overflow: visible;
+        page-break-inside: avoid; /* Avoid breaking cards between pages */
+    }
+
+    .modal {
+        display: none; /* Hide modal during printing */
+    }
+
+    button {
+        display: none; /* Hide buttons during printing */
+    }
+}
