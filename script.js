@@ -123,9 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
         progress.style.width = `${progressPercentage}%`;
     }
 
-    // Show the final query string in a popup
-    function showFinalQuery() {
-        const queryString = `SELECT * FROM conectandoDB.centros WHERE ${queryConditions.join(' AND ')};`;
 
         // Create the popup elements
         const popupOverlay = document.createElement('div');
