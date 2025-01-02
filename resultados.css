@@ -196,6 +196,16 @@ p{
     flex-wrap: wrap;
 }
 
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem;
+    color: white;
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -271,6 +281,35 @@ p{
     justify-content: space-between;
 }
 
+.card::-webkit-scrollbar {
+    width: 8px;
+}
+
+.card::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.card::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3;
+}
+
+.card-content::-webkit-scrollbar,
+.slide::-webkit-scrollbar {
+    width: 8px;
+}
+
+.card-content::-webkit-scrollbar-thumb,
+.slide::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.card-content::-webkit-scrollbar-thumb:hover,
+.slide::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3;
+}
+
 .slideshow-container {
     position: relative;
     width: 100%;
@@ -279,6 +318,10 @@ p{
     margin-top: 10px;
     border-radius: 10px;
     transition: max-height 0.3s ease-in-out;
+}
+
+.slideshow-container.show {
+    max-height: 500px; /* Ajusta según el contenido */
 }
 
 .slide {
@@ -299,6 +342,29 @@ p{
     margin-bottom: 10px;
 }
 
+.slide h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a2165;
+    margin-bottom: 10px;
+}
+
+.h3-slide{
+    color: #555555;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+    margin-left: 2%;
+}
+
+.slide p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    color: #555555;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -306,10 +372,23 @@ p{
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    font-size: 18px;
-    padding: 10px;
+    font-size: 0.8rem;
+    padding: 2%;
     border: none;
     border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 .dots-container {
@@ -325,10 +404,16 @@ p{
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .dot.active {
     background-color: #007bff;
+}
+
+.slide.active img {
+    transform: scale(0.9); /* Cambia el valor según el tamaño deseado */
+    transition: transform 0.3s ease-in-out; /* Suaviza el cambio de escala */
 }
 
 .grid-container {
@@ -402,6 +487,7 @@ p{
     text-decoration: underline;
 }
 
+/* Modal Overlay */
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
@@ -417,20 +503,20 @@ p{
 /* Modal Content */
 .modal-content {
     background-color: #fff;
-    margin: 10% auto;
+    margin: 7% auto;
     padding: 20px;
     border: none;
     border-radius: 15px; /* Esquinas redondeadas */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     width: 80%;
-    max-width: 500px;
+    max-width: 30%;
     position: relative;
     text-align: center; /* Centra todo el contenido */
     font-family: 'Montserrat', sans-serif;
 }
 
 .modal-content h4 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
@@ -446,7 +532,7 @@ p{
 }
 
 .modal-content p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.5;
     color: #555;
     margin-bottom: 15px;
@@ -460,13 +546,14 @@ p{
     color: #444;
 }
 
+
 /* Close Button */
 .close-button {
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 1%;
+    right: 2%;
     color: #aaa;
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
 }

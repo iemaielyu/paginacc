@@ -32,27 +32,26 @@
 
     <h1>Resultados del Tamizaje</h1>
 
-    <div id="conditionModal" class="modal"> 
-        <div class="modal-content"> 
-            <span class="close-button">&times;</span> 
-            <div id="modal-slideshow-container"> <!-- Slides and navigation buttons will be populated here -->
-         </div> 
+    <!-- Container for deficiencies -->
+    <div id="deficiencias-container" class="container"></div>
+
+    <!-- Modal for displaying condition details -->
+    <div id="conditionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modal-slideshow-container">
+                <!-- Dynamic content will be injected here -->
+            </div>
         </div>
-    </div>    
+    </div>
 
-    
-<!-- Contenedor para las deficiencias -->
-<div id="deficiencias-container" class="deficiencias-container"></div>
+    <!-- Contenedor de los resultados -->
+    <main>
+        <div id="grid-container" class="grid-container"></div>
+    </main>
 
-<div id="centros-container" style="display: none;"></div>
-
- <!-- Contenedor de los resultados -->
- <main>
-    <div id="grid-container" class="grid-container"></div>
-</main>
-
-<!-- Botón para ver los centros de atención -->
-<button id="showCentersButton" class="button-centers">Ver posibles centros de atención</button>
+    <!-- Botón para ver los centros de atención -->
+    <button id="showCentersButton" class="button-centers">Ver posibles centros de atención</button>
 
     <!-- Botones para imprimir y guardar PDF -->
     <div class="button-container">
@@ -62,6 +61,5 @@
 
     <!-- Importar el script -->
     <script src="resultados.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
