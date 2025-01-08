@@ -112,7 +112,6 @@ h1 {
     grid-template-columns: repeat(4, auto); /* Crea cuatro columnas de ancho automático */
     justify-content: center; /* Centra horizontalmente las columnas dentro del contenedor */
     gap: 2rem   ; /* Espacio entre columnas */
-    padding: 1%; /* Espaciado interno opcional */
     place-items: center;
 
 }
@@ -138,7 +137,6 @@ h4{
 
 p{
     font-size: 1rem;
-    line-height: 1.1rem;
 }
 
 .button-centers{
@@ -147,12 +145,14 @@ p{
     color: white;
     padding: 0.5rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 25px;
     transition: background-color 0.7s;
     margin-bottom: 1%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 600;
+    font-size: 0.7rem;
 }
 
 .button-print{
@@ -236,11 +236,13 @@ p{
 
 .card h3 {
     font-size: 1rem;
-    margin-top: 10px;
+    margin-top: 20px;
     color: black;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 9%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .card p {
@@ -249,10 +251,12 @@ p{
     color: #555555;
     text-align: center;
     margin-bottom: 10%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .card button {
-    margin-top: auto;
+    margin-top: -2px;
     padding: 10px 20px;
     font-size: 0.7rem;
     font-weight: 600;
@@ -385,10 +389,12 @@ p{
 
 .prev {
     left: 10px;
+    top: 47.7%;
 }
 
 .next {
     right: 10px;
+    top: 47.7%;
 }
 
 .dots-container {
@@ -521,13 +527,14 @@ p{
     color: #333;
     margin-bottom: 10px;
     text-align: center; /* Centra el título */
+    margin-top: 53px;
 }
 
 .modal-content img {
     width: 100px; /* Tamaño más grande para reflejar la imagen compartida */
-    height: 200px;
+    height: 90%;
     display: block;
-    margin: 0 auto 15px; /* Centra la imagen */
+    margin: 37px auto 0px; /* Centra la imagen */
     border-radius: 15px; /* Esquinas redondeadas */
 }
 
@@ -624,6 +631,14 @@ p{
         grid-template-columns: repeat(1, 1fr); /* Dos columnas si hay más de un elemento */
     }
     
+    .modal-content{
+        max-width: 100%;
+    }
+
+    .grid-container{
+        margin-top: 18%;
+        margin-left: 15%;
+    }
   }
 
 
