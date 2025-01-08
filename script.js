@@ -157,8 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 popupOverlay.remove();
             }, 300);
         });
-    }
-});
+    });
 
 
 
