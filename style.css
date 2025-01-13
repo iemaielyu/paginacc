@@ -368,7 +368,7 @@ a{
     justify-content: center;
     align-items: center;
     text-align: justify;
-    height: 65%; /* Full height for centering */
+    height: 100%; /* Full height for centering */
     background-color: #1a2165;
     transition: opacity 0.5s ease; /* Transition for fade-out effect */
     opacity: 1; /* Initial opacity */
@@ -377,6 +377,8 @@ a{
     font-size: 1rem;
     line-height: 1.1rem;
     z-index: 1;
+    padding-top: 25%;
+
 }
 
 .welcome-screen.fade-out {
