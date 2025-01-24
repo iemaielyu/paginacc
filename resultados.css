@@ -597,7 +597,7 @@ p{
     .off-screen-menu{
         font-size: 0.8rem;
         margin-left: 0.1rem;
-        background-color: rgb(39, 69, 249);
+        background-color: #1a2165
         height: 7rem;
         z-index: 2;
         border-radius: 15%;
